@@ -4,3 +4,9 @@
 */
 
 #include "grad-convoy\CfgFunctions.hpp"
+
+class GRAD_SilentRain {
+	tag = "grad_SR";
+
+	#include "functions\Drop\CfgFunctions.hpp"
+};
