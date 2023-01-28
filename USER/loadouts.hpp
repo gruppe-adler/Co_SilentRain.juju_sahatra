@@ -18,7 +18,7 @@
 */
 
 
-loadoutFactionBlu = "BwAlt";
+loadoutFactionBlu = "KskAlt";
 loadoutFactionOpf = "";
 loadoutFactionInd = "";
 
