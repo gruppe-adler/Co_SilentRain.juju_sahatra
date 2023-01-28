@@ -83,12 +83,12 @@ waitUntil {  time > 3 };
   }] call zen_custom_modules_fnc_register;
 
 
-  ["HUSAR - Missionsablauf", "Init Halo Jump",
+  ["HUSAR - Missionsablauf", "Execute Halo Jump",
   {
     // Get all the passed parameters
     params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
 
-    [[],"USER\scripts\initHaloJump.sqf"] remoteExec ["BIS_fnc_execVM",0,false];
+    [] remoteExec ["grad_drop_fnc_haloJumpExecute", 2];
 
     systemChat "ZEUS debug: halo jump sequence started";
 
