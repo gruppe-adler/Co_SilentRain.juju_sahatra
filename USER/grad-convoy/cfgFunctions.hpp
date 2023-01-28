@@ -12,8 +12,8 @@ class grad_convoy {
 		class getSpeedLimit;
 		class getVehicleDefinitions;
 		class healthCheck;
-		class hideWaypoints { postInit = 1; };
-		class init { postInit = 1; };
+		class hideWaypoints {  };
+		class init {  };
 		class removeVehicleFromConvoy;
 		class startConvoy;
 		class startConvoyZeus;

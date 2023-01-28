@@ -4,7 +4,6 @@ diwako_dui_main_toggled_off = true;
 
 userTexture1 setObjectTexture [0, "data\intro1.paa"];
 userTexture2 setObjectTexture [0, "data\intro2.paa"];
-userTexture3 setObjectTexture [0, "data\intro3.paa"];
 
 playMusic "LeadTrack02_F_Tank";
 
@@ -60,7 +59,6 @@ sleep 3;
 
 userTexture1 setObjectTexture [0, ""];
 userTexture2 setObjectTexture [0, ""];
-userTexture3 setObjectTexture [0, ""];
 
 cutText ["", "BLACK IN", 10];
 
