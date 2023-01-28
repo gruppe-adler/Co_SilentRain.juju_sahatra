@@ -9,4 +9,6 @@ class GRAD_SilentRain {
 	tag = "grad_SR";
 
 	#include "functions\Drop\CfgFunctions.hpp"
+	#include "functions\Prequel\CfgFunctions.hpp"
+	#include "functions\zeus\CfgFunctions.hpp"
 };

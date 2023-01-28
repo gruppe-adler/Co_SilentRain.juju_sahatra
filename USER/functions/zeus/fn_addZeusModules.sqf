@@ -1,0 +1,14 @@
+
+[
+	"Silent Rain",
+	"Start Food Call",
+	{ 
+		params ["_modulePosition"]; 
+		
+		if (isMultiplayer) then {
+			[] remoteExec ["grad_SR_fnc_Prequel_playCall", -2];
+		} else {
+			["food_call"] spawn grad_SR_fnc_Prequel_playCall;
+		};
+	}
+] call zen_custom_modules_fnc_register;
