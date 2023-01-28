@@ -94,6 +94,18 @@ waitUntil {  time > 3 };
 
   }] call zen_custom_modules_fnc_register; 
 
+["HUSAR - Missionsablauf", "Spawn Kebap Car",
+  {
+    // Get all the passed parameters
+    params [["_position", [0,0,0], [[]], 3], ["_objectUnderCursor", objNull, [objNull]]];
+
+    _position = ASLtoAGL _position;
+    [_position] remoteExec ["grad_SR_fnc_killerKebap_spawnCar", 2];
+
+
+  }] call zen_custom_modules_fnc_register; 
+
+
 
   ["HUSAR - Missionsablauf", "Time Jump to Morning",
   {
