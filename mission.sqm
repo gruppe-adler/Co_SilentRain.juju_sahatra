@@ -8,22 +8,22 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=11667;
+		nextID=11674;
 	};
 	class MarkerIDProvider
 	{
-		nextID=11;
+		nextID=13;
 	};
 	class LayerIndexProvider
 	{
-		nextID=1118;
+		nextID=1166;
 	};
 	class Camera
 	{
-		pos[]={6050.6826,330.33221,8209.0781};
-		dir[]={-0.18762749,-0.64043146,-0.74483436};
-		up[]={-0.15645574,0.76795667,-0.62109512};
-		aside[]={-0.96977365,1.1873635e-006,0.24429096};
+		pos[]={2307.7776,63.463825,6638.2832};
+		dir[]={-0.63004291,-0.25460398,-0.73370874};
+		up[]={-0.16587681,0.96704364,-0.19317003};
+		aside[]={-0.75870508,-2.2118911e-008,0.65151036};
 	};
 };
 binarizationWanted=0;
@@ -2660,7 +2660,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=300;
+		items=306;
 		class Item0
 		{
 			dataType="Layer";
@@ -85322,6 +85322,71 @@ class Mission
 			};
 			id=11665;
 			type="C130J_static_EP1";
+		};
+		class Item300
+		{
+			dataType="Marker";
+			position[]={2532.408,36.389,6245.042};
+			name="warlord_pos_1";
+			text="Warlord Pos 1";
+			type="hd_warning";
+			colorName="ColorEAST";
+			id=11667;
+			atlOffset=0.00039291382;
+		};
+		class Item301
+		{
+			dataType="Marker";
+			position[]={2185.842,36.55452,6516.48};
+			name="warlord_pos_2";
+			text="Warlord Pos 2";
+			type="hd_warning";
+			colorName="ColorEAST";
+			id=11668;
+		};
+		class Item302
+		{
+			dataType="Marker";
+			position[]={2552.0171,36.755001,6374.1289};
+			name="warlord_pos_3";
+			text="Warlord Pos 3";
+			type="hd_warning";
+			colorName="ColorEAST";
+			id=11669;
+			atlOffset=0.00048446655;
+		};
+		class Item303
+		{
+			dataType="Marker";
+			position[]={2553.344,35.900002,5962.7231};
+			name="warlord_pos_4";
+			text="Warlord Pos 4";
+			type="hd_warning";
+			colorName="ColorEAST";
+			id=11670;
+			atlOffset=0.00078201294;
+		};
+		class Item304
+		{
+			dataType="Marker";
+			position[]={2292.6479,38.111,6659.9058};
+			name="warlord_pos_5";
+			text="Warlord Pos 5";
+			type="hd_warning";
+			colorName="ColorEAST";
+			id=11671;
+			atlOffset=0.00036239624;
+		};
+		class Item305
+		{
+			dataType="Marker";
+			position[]={2238.761,30.32,6178.1821};
+			name="drop_zone_1";
+			text="Drop Zone 1";
+			type="hd_end";
+			colorName="ColorWEST";
+			id=11672;
+			atlOffset=8.2015991e-005;
 		};
 	};
 	class Connections
