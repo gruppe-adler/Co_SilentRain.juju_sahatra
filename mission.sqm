@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=11675;
+		nextID=11682;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5994.8525,191.72607,7830.5435};
-		dir[]={-0.67048067,-0.73746037,0.081294231};
-		up[]={-0.7320987,0.67539006,0.088765308};
-		aside[]={0.1203662,-2.5320332e-009,0.99272966};
+		pos[]={5933.1738,150.46864,7867.2085};
+		dir[]={-0.60250777,-0.60070741,-0.52552706};
+		up[]={-0.45275134,0.79941988,-0.39490473};
+		aside[]={-0.65733737,9.5051655e-007,0.75362617};
 	};
 };
 binarizationWanted=0;
@@ -86,13 +86,14 @@ addons[]=
 	"CUP_Buildings_Config",
 	"A3_Structures_F_Mil_Fortification",
 	"CUP_Editor_A2_Roads_Config",
-	"ffaa_casas_af"
+	"ffaa_casas_af",
+	"UK3CB_Factions_ADC_C"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=45;
+		items=46;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -398,6 +399,13 @@ class AddonsMetaData
 			className="ffaa_casas_af";
 			name="ffaa_casas_af";
 		};
+		class Item45
+		{
+			className="UK3CB_Factions_ADC";
+			name="3CB Factions - ADC";
+			author="3 Commando Brigade";
+			url="www.3commandobrigade.com";
+		};
 	};
 };
 dlcs[]=
@@ -408,7 +416,8 @@ dlcs[]=
 	"RHS_GREF",
 	"Enoch",
 	"Expansion",
-	"Heli"
+	"Heli",
+	"UK3CB_Factions"
 };
 randomSeed=938738;
 class ScenarioData
@@ -2652,7 +2661,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=251;
+		items=254;
 		class Item0
 		{
 			dataType="Layer";
@@ -83700,6 +83709,89 @@ class Mission
 			angle=45.067001;
 			id=11674;
 			atlOffset=-0.00040435791;
+		};
+		class Item251
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5929.8545,147.88777,7863.8394};
+				angles[]={6.268187,6.1799312,0.0049914722};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=11676;
+			type="UK3CB_ADC_C_Datsun_Civ_Closed";
+			atlOffset=1.5258789e-005;
+		};
+		class Item252
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5930.8599,147.70889,7862.7622};
+				angles[]={0,4.6071529,0};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=11680;
+			type="UserTexture1m_F";
+			atlOffset=1.3069916;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="data\killerkebap.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
+		};
+		class Item253
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5929.6479,147.66183,7865.5791};
+				angles[]={4.9263105,2.9856436,6.1291814};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=11681;
+			type="UserTexture1m_F";
+			atlOffset=1.2162628;
+			class CustomAttributes
+			{
+				class Attribute0
+				{
+					property="ObjectTextureCustom0";
+					expression="_this setObjectTextureGlobal [0,_value]";
+					class Value
+					{
+						class data
+						{
+							singleType="STRING";
+							value="data\killerkebap.paa";
+						};
+					};
+				};
+				nAttributes=1;
+			};
 		};
 	};
 	class Connections
