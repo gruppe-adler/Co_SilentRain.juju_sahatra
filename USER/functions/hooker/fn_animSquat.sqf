@@ -1,0 +1,1 @@
+[player] remoteExecCall ["grad_SR_fnc_hooker_animSquatStart", 0];
