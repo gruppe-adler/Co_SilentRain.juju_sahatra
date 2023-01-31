@@ -1,6 +1,6 @@
 params ["_unit"];
 
-_unit setVariable ["grad_SR_animationRunning", true];
+_unit setVariable ["grad_SR_animationRunning", true, true];
 
 _unit switchMove "Acts_Executioner_Squat";
 
@@ -22,6 +22,8 @@ _unit switchMove "Acts_Executioner_Squat";
         },{
             params ["_unit"];
             _unit setAnimSpeedCoef 1;
+
+            [_unit] remoteExec ["grad_SR_fnc_hooker_pee", 0];
         }, [_unit]] call CBA_fnc_waitUntilAndExecute;
 
     }, [_unit]] call CBA_fnc_waitUntilAndExecute;

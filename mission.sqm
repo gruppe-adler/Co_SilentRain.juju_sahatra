@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=11914;
+		nextID=11916;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1214;
+		nextID=1238;
 	};
 	class Camera
 	{
-		pos[]={5956.9907,151.08997,7864.2852};
-		dir[]={-0.27063248,-0.37355804,0.88725048};
-		up[]={-0.10898691,0.92760742,0.35730624};
-		aside[]={0.95649475,-1.7229468e-008,0.29175356};
+		pos[]={5958.0024,153.90617,7865.3403};
+		dir[]={-0.53591335,-0.688205,0.48905325};
+		up[]={-0.50835156,0.72551626,0.46390164};
+		aside[]={0.67407626,8.2305633e-008,0.73866373};
 	};
 };
 binarizationWanted=0;
@@ -88,13 +88,14 @@ addons[]=
 	"CUP_Editor_A2_Roads_Config",
 	"ffaa_casas_af",
 	"UK3CB_Factions_KRG_O",
-	"UK3CB_Factions_AAF_O"
+	"UK3CB_Factions_AAF_O",
+	"women"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=47;
+		items=48;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -413,6 +414,11 @@ class AddonsMetaData
 			name="3CB Factions - AAF";
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
+		};
+		class Item47
+		{
+			className="women";
+			name="women";
 		};
 	};
 };
@@ -2669,7 +2675,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=316;
+		items=317;
 		class Item0
 		{
 			dataType="Layer";
@@ -85857,7 +85863,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2555.6389,18.812105,4851.7568};
-				angles[]={-0,5.516305,0.023440579};
+				angles[]={0,5.516305,0.023440579};
 			};
 			side="Empty";
 			flags=4;
@@ -87131,7 +87137,7 @@ class Mission
 			class PositionInfo
 			{
 				position[]={2495.1301,31.287664,5849.457};
-				angles[]={-0,5.516305,0.039989591};
+				angles[]={0,5.516305,0.039989591};
 			};
 			side="Empty";
 			flags=4;
@@ -87383,6 +87389,37 @@ class Mission
 			};
 			id=11910;
 			type="UK3CB_AAF_O_SUV_Armoured";
+			atlOffset=1.5258789e-005;
+		};
+		class Item316
+		{
+			dataType="Group";
+			side="Civilian";
+			class Entities
+			{
+				items=1;
+				class Item0
+				{
+					dataType="Object";
+					class PositionInfo
+					{
+						position[]={5952.4458,146.61226,7870.1685};
+						angles[]={0,1.0527428,-0};
+					};
+					side="Civilian";
+					flags=7;
+					class Attributes
+					{
+					};
+					id=11915;
+					type="Max_woman2";
+					atlOffset=1.5258789e-005;
+				};
+			};
+			class Attributes
+			{
+			};
+			id=11914;
 			atlOffset=1.5258789e-005;
 		};
 	};

@@ -11,7 +11,7 @@ if ((side player) == east) then {
         ];
 };
 
-player addEventHandler ["AnimDone", {
+_unit addEventHandler ["AnimDone", {
     params ["_unit", "_anim"];
 
     // hint str _anim;

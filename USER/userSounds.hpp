@@ -16,3 +16,10 @@ class escort_call
 	sound[]	= {"\USER\sounds\Escort_Call.ogg", db + 5, 1.0 };
 	titles[] = {};
 };
+
+class escort_pee
+{
+	name	= "escort_pee";
+	sound[]	= {"\USER\sounds\escort_pee.ogg", db + 5, 1.0 };
+	titles[] = {};
+};

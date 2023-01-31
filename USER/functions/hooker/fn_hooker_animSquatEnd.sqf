@@ -21,7 +21,7 @@ _unit switchMove "Acts_Executioner_Squat_End";
         animationState _unit != toLower "Acts_Executioner_Squat_End"
     },{
         params ["_unit"];
-        _unit setVariable ["grad_SR_animationRunning", false];
+        _unit setVariable ["grad_SR_animationRunning", false, true];
         _unit setMimic "neutral";
         _unit switchMove "";
         _unit setAnimSpeedCoef 1;
