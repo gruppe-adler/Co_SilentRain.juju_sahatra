@@ -23,7 +23,7 @@ _unit switchMove "Acts_Executioner_Squat";
             params ["_unit"];
             _unit setAnimSpeedCoef 1;
 
-            [_unit] remoteExec ["grad_SR_fnc_hooker_pee", 0];
+            [[_unit], "USER\functions\hooker\fn_hooker_pee.sqf"] remoteExec ["BIS_fnc_execVM", 0];
         }, [_unit]] call CBA_fnc_waitUntilAndExecute;
 
     }, [_unit]] call CBA_fnc_waitUntilAndExecute;
