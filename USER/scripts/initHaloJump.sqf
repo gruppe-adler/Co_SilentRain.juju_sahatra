@@ -31,7 +31,7 @@ if (isServer) then {
                             [{
                                 params ["_args", "_handle"];
 
-                                if (sunOrMoon < 0.2) then {
+                                if (sunOrMoon < 0.2 && isNil "grad_drop_debug") then {
                                     setAperture 4;
                                 } else {
                                     setAperture -1;
