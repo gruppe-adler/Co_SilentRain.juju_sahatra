@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=11926;
+		nextID=11933;
 	};
 	class MarkerIDProvider
 	{
@@ -20,10 +20,10 @@ class EditorData
 	};
 	class Camera
 	{
-		pos[]={5956.0361,151.28226,7885.5986};
-		dir[]={-0.90703273,-0.32621175,0.26627308};
-		up[]={-0.31301114,0.94529581,0.091889985};
-		aside[]={0.28168374,7.9162419e-008,0.95952094};
+		pos[]={5950.189,162.21227,7871.2852};
+		dir[]={-0.18829113,-0.66999459,0.71810061};
+		up[]={-0.16993472,0.74235964,0.64809316};
+		aside[]={0.96730739,-2.9271177e-008,0.25363612};
 	};
 };
 binarizationWanted=0;
@@ -88,13 +88,15 @@ addons[]=
 	"CUP_Editor_A2_Roads_Config",
 	"ffaa_casas_af",
 	"UK3CB_Factions_KRG_O",
-	"UK3CB_Factions_AAF_O"
+	"UK3CB_Factions_AAF_O",
+	"A3_Structures_F_Orange_VR_Helpers",
+	"A3_Structures_F_Heli_VR_Helpers"
 };
 class AddonsMetaData
 {
 	class List
 	{
-		items=47;
+		items=49;
 		class Item0
 		{
 			className="A3_Modules_F_Heli";
@@ -414,6 +416,20 @@ class AddonsMetaData
 			author="3 Commando Brigade";
 			url="www.3commandobrigade.com";
 		};
+		class Item47
+		{
+			className="A3_Structures_F_Orange";
+			name="Arma 3 Orange - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
+		class Item48
+		{
+			className="A3_Structures_F_Heli";
+			name="Arma 3 Helicopters - Buildings and Structures";
+			author="Bohemia Interactive";
+			url="https://www.arma3.com";
+		};
 	};
 };
 dlcs[]=
@@ -425,7 +441,8 @@ dlcs[]=
 	"Enoch",
 	"Expansion",
 	"Heli",
-	"UK3CB_Factions"
+	"UK3CB_Factions",
+	"Orange"
 };
 randomSeed=938738;
 class ScenarioData
@@ -2669,7 +2686,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=323;
+		items=327;
 		class Item0
 		{
 			dataType="Layer";
@@ -86968,7 +86985,7 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5942.355,148.43379,7889.8228};
+						position[]={5938.8271,148.43967,7890.1172};
 						angles[]={6.2631865,5.680223,0};
 					};
 					side="West";
@@ -87044,8 +87061,8 @@ class Mission
 					dataType="Object";
 					class PositionInfo
 					{
-						position[]={5941.2974,148.43852,7890.0586};
-						angles[]={6.2631865,5.680223,0};
+						position[]={5941.334,148.44322,7890.2949};
+						angles[]={6.2631865,4.8605061,0};
 					};
 					side="West";
 					flags=6;
@@ -87058,7 +87075,6 @@ class Mission
 					};
 					id=2925;
 					type="B_soldier_AR_F";
-					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -87108,7 +87124,6 @@ class Mission
 			{
 			};
 			id=11920;
-			atlOffset=1.5258789e-005;
 		};
 		class Item318
 		{
@@ -87495,6 +87510,69 @@ class Mission
 			};
 			id=11925;
 			atlOffset=1.458374;
+		};
+		class Item323
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5945.0566,148.43394,7889.8525};
+				angles[]={6.2631865,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=11926;
+			type="Sign_sphere25cm_EP1";
+		};
+		class Item324
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5944.2632,148.37726,7887.0181};
+				angles[]={6.2631865,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=11927;
+			type="Sign_Sphere10cm_Geometry_F";
+		};
+		class Item325
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5933.7505,148.50481,7893.3906};
+			};
+			side="Empty";
+			class Attributes
+			{
+			};
+			id=11928;
+			type="Sign_sphere25cm_EP1";
+			atlOffset=1.4480896;
+		};
+		class Item326
+		{
+			dataType="Object";
+			class PositionInfo
+			{
+				position[]={5932.8535,148.44722,7890.5146};
+				angles[]={6.2631865,0,0};
+			};
+			side="Empty";
+			flags=4;
+			class Attributes
+			{
+			};
+			id=11930;
+			type="Sign_Sphere25cm_F";
 		};
 	};
 	class Connections
