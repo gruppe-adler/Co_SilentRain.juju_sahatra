@@ -17,14 +17,14 @@ switch (_call) do {
 		[
 			["Nadia", "Salem Qasim.", 6.5],
 			["Lord Quasim", "Salam Alaikum Nadia.", 8],
-			["Nadia", "Qasim, I really long to see you. Can I come by tonight?", 9.5],
-			["Lord Qasim", "Nadia, my palm tree is thirsty. Let me throw out my visitors and I should be free in a few minutes.", 14.5],
-			["Nadia", "Rain will come my dear, I promise. See you soon!", 21.5],
-			["Lord Qasim", "See you in a bit, my beauty", 26.5],
-			["", "", 32]
+			["Nadia", "Qasim, I really long to see you. Can I come over for a bit?", 9.5],
+			["Lord Qasim", "Nadia, my palm tree is thirsty. Let me throw out my visitors and I should be free in a few minutes.", 15],
+			["Nadia", "Rain will come my dear, I promise. See you soon!", 22],
+			["Lord Qasim", "See you in a bit, my beauty", 27],
+			["", "", 33]
 		] spawn BIS_fnc_EXP_camp_playSubtitles;
 		
-		sleep 29.5;
+		sleep 30;
 	};	
 };
 
