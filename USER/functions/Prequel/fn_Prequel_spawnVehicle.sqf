@@ -28,17 +28,20 @@ if ((_veh emptyPositions "Gunner") isEqualTo 1) then {
 	_gunner assignAsGunner _veh;
 	_gunner moveInGunner _veh;
 };
+
 if ((_veh emptyPositions "Commander") isEqualTo 1) then {
 	private _commander = _crewGroup createUnit [_unitType, [0, 0, 0], [], 0, "NONE"];
 	[_commander] call GRAD_Loadout_fnc_doLoadoutForUnit;
 	_commander assignAsCommander _veh;
 	_commander moveInCommander _veh;
 };
+
 private _driver = _crewGroup createUnit [_unitType, [2, 2, 0], [], 0, "NONE"];
 [_driver] call GRAD_Loadout_fnc_doLoadoutForUnit;
 _driver assignAsDriver _veh;
 _driver moveInDriver _veh;
 
+_crewGroup setBehaviourStrong "CARELESS";
 
 if (_transport isEqualTo []) exitWith {
 	[_veh, _crewGroup]
