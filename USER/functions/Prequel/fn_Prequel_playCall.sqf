@@ -12,6 +12,7 @@ switch (_call) do {
 		
 		sleep 29;
 	};
+
 	case "escort_call": {
 		playSound "escort_call";
 		[
@@ -25,6 +26,31 @@ switch (_call) do {
 		] spawn BIS_fnc_EXP_camp_playSubtitles;
 		
 		sleep 30;
+	};
+
+	case "evac_call_combat": {
+		playSound "evac_call_combat";
+		[
+			["Bodyguard", "The compound is under attack, I repeat, the compound is under attack! We need to get Qasim out of here now!", 6.5],
+			["Sahatra Base", "Understood, what kind of contact?", 14.5],
+			["Bodyguard", "Seems like only infantry to me! Now hurry the fuck up!", 17.5],
+			["Sahatra Base", "Copy! EVAC is on its way; ETA: 5 mike!", 22.5],
+			["", "", 30]
+		] spawn BIS_fnc_EXP_camp_playSubtitles;
+		
+		sleep 28;
+	};
+
+	case "evac_call_normal": {
+		playSound "evac_call_normal";
+		[
+			["Sahatra Base", "This is Sahatra Base. Lord Qasim, how can we help you?", 6.5],
+			["Qasim", "I need a transport back to Sahatra. The meeting with Colonel Amir is in an hour and i need some time to prepare.", 11],
+			["Sahatra Base", "Of course! A convoy is on its way and will arrive in about 5 minutes.", 17.5],
+			["", "", 23]
+		] spawn BIS_fnc_EXP_camp_playSubtitles;
+		
+		sleep 23;
 	};	
 };
 

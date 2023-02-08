@@ -17,6 +17,20 @@ class escort_call
 	titles[] = {};
 };
 
+class evac_call_combat
+{
+	name	= "evac_call_combat";
+	sound[]	= {"\USER\sounds\EVAC_call_combat.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class evac_call_normal
+{
+	name	= "evac_call_normal";
+	sound[]	= {"\USER\sounds\EVAC_call_normal.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
 class escort_pee2
 {
 	name	= "escort_pee2";
