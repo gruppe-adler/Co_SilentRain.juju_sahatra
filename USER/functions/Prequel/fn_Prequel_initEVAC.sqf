@@ -1,4 +1,4 @@
-#define DISTANCE_TO_KEEP 15
+#define DISTANCE_TO_KEEP 20
 
 if (!isServer || !canSuspend) exitWith { _this remoteExec [_fnc_scriptName, 2]; };
 
@@ -8,9 +8,9 @@ private _vodnikTransport = ["O_Soldier_SL_F", "O_Soldier_F", "O_Soldier_LAT_F", 
 (["UK3CB_KRG_O_BTR60", GRAD_spawn_btr_1, "O_crew_F"] call grad_SR_fnc_Prequel_spawnVehicle) params ["_btr_1", "_btr_1_crewGroup"];
 (["UK3CB_ADR_O_Hilux_Dshkm", GRAD_spawn_pickup_1, "O_Soldier_F", _pickupTransport] call grad_SR_fnc_Prequel_spawnVehicle) params ["_pickup_1", "_pickup_1_crewGroup", "_pickup_1_transportGroup"];
 [_pickup_1, [0, "uk3cb_factions\addons\uk3cb_factions_vehicles\wheeled\uk3cb_factions_vehicles_hilux\data\ada_des_hilux_exterior_co.paa"]] remoteExec ["setObjectTexture", 0, _pickup_1];
-(["UK3CB_ARD_O_GAZ_Vodnik", GRAD_spawn_vodnik, "O_Soldier_F", _vodnikTransport] call grad_SR_fnc_Prequel_spawnVehicle) params ["_vodnik", "_vodnik_crewGroup", "_vodnik_transportGroup"];
 (["UK3CB_ADR_O_Hilux_Dshkm", GRAD_spawn_pickup_2, "O_Soldier_F", _pickupTransport] call grad_SR_fnc_Prequel_spawnVehicle) params ["_pickup_2", "_pickup_2_crewGroup", "_pickup_2_transportGroup"];
 [_pickup_2, [0, "uk3cb_factions\addons\uk3cb_factions_vehicles\wheeled\uk3cb_factions_vehicles_hilux\data\ada_des_hilux_exterior_co.paa"]] remoteExec ["setObjectTexture", 0, _pickup_2];
+(["UK3CB_ARD_O_GAZ_Vodnik", GRAD_spawn_vodnik, "O_Soldier_F", _vodnikTransport] call grad_SR_fnc_Prequel_spawnVehicle) params ["_vodnik", "_vodnik_crewGroup", "_vodnik_transportGroup"];
 // (["UK3CB_KRG_O_BTR60", GRAD_spawn_btr_2, "O_crew_F"] call grad_SR_fnc_Prequel_spawnVehicle) params ["_btr_2", "_btr_2_crewGroup"];
 
 sleep 2;
@@ -53,7 +53,7 @@ switch (GRAD_WARLORD_POSITION) do {
 			_pos12Path pushBack _point;
 		};
 
-		private _path = _approachPath + _pos12Path;
+		_path = _approachPath + _pos12Path;
 	};
 
 	case 3: {
@@ -81,7 +81,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathBtr_1 = _path + _pos3_btr_path;
 
 		private _pos3_pickup1_path = [];
-		_finishMarkerNumber = 9;
+		_finishMarkerNumber = 10;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_pickup1_%1", _i]);
@@ -91,7 +91,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathPickup_1 = _path + _pos3_pickup1_path;
 
 		private _pos3_vodnik_path = [];
-		_finishMarkerNumber = 13;
+		_finishMarkerNumber = 16;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_vodnik_%1", _i]);
@@ -101,7 +101,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathVodnik = _path + _pos3_vodnik_path;
 
 		private _pos3_pickup2_path = [];
-		_finishMarkerNumber = 16;
+		_finishMarkerNumber = 25;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_pickup2_%1", _i]);
@@ -109,34 +109,54 @@ switch (GRAD_WARLORD_POSITION) do {
 			_pos3_pickup2_path pushBack _point;
 		};
 		_pathPickup_2 = _path + _pos3_pickup2_path;
-
-		missionNamespace setVariable ["GRAD_EVAC_vehiclesPaths", [[_btr_1, _pathBtr_1], [_pickup_1, _pathPickup_1], [_vodnik, _pathVodnik], [_pickup_2, _pathPickup_2]], true];
 	};
 };
-
 
 {
 	_x params ["_veh", "_path"];
 	_veh setDriveOnPath _path;
-} forEach [[_btr_1, _pathBtr_1], [_pickup_1, _pathPickup_1], [_vodnik, _pathVodnik], [_pickup_2, _pathPickup_2]];
+} forEach [[_btr_1, _pathBtr_1], [_pickup_1, _pathPickup_1], [_pickup_2, _pathPickup_2], [_vodnik, _pathVodnik]];
 
 _handle = 
 [
 	{
-		params ["_args", "_handle"];
+		params ["_vehiclesPaths", "_handle"];
 
-		private _vehiclesPaths = missionNamespace getVariable ["GRAD_EVAC_vehiclesPaths", []];
-	
 		private _lead = (_vehiclesPaths select 0) select 0;
-		_lead forceSpeed -1;
 		private _leadPath = (_vehiclesPaths select 0) select 1;
-		systemChat str _lead;
-		if (_lead inArea [_leadPath select ((count _leadPath) - 1), 5, 5, 0, false]) then {
-			_vehiclesPaths deleteAt 0;
-			missionNamespace setVariable ["GRAD_EVAC_vehiclesPaths", _vehiclesPaths, true];
-		};
+		if (_lead inArea [_leadPath select ((count _leadPath) - 1), 5, 5, 0, false]) exitWith {
+			for "_i" from 1 to ((count _vehiclesPaths) - 1) do {
+				private _veh = (_vehiclesPaths select _i) select 0;
+				_veh forceSpeed -18;				
+			};
+			systemChat "Stopping handler";
+			[
+				{
+					params ["_veh"];
+					_veh inArea [[2266.66,6617.2,0], 5, 5, 0, false]
+				},
+				{
+					params ["_veh"];
+					_veh forceSpeed 10;
+					systemChat "slowing pickup 2";
+				},
+				[(_vehiclesPaths select 2) select 0]
+			] call CBA_fnc_waitUntilAndExecute;
 
-		if (_vehiclesPaths isEqualTo []) exitWith { [_handle] call CBA_fnc_removePerFrameHandler; };
+			[
+				{
+					params ["_veh"];
+					_veh inArea [[2220.42,6543.28,0], 5, 5, 0, false]
+				},
+				{
+					params ["_veh"];
+					_veh forceSpeed 10;
+					systemChat "slowing pickup 1";
+				},
+				[(_vehiclesPaths select 1) select 0]
+			] call CBA_fnc_waitUntilAndExecute;			
+			[_handle] call CBA_fnc_removePerFrameHandler;
+		};
 
 		// systemChat format["0: %1",(speed _lead) / 3.6];
 		for "_i" from 1 to ((count _vehiclesPaths) - 1) do {
@@ -154,6 +174,6 @@ _handle =
 			// systemChat format["%1: %2", _i, _aim];
 		};
 	},
-	1,
-	[]
+	0,
+	[[_btr_1, _pathBtr_1], [_pickup_1, _pathPickup_1], [_pickup_2, _pathPickup_2], [_vodnik, _pathVodnik]]
 ] call CBA_fnc_addPerFrameHandler;
