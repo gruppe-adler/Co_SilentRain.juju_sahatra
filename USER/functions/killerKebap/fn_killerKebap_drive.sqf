@@ -14,6 +14,13 @@ sleep 2;
 
 _killerKEbapdriver addUniform "UK3CB_ADC_C_Shorts_U_04";
 
+private _kebapbox = "EauDeCombat_01_box_F" createVehicle [0,0,0];
+_kebapbox attachTo [_killerkebapdriver, [0,0,0], "lefthand", true];
+_kebapbox setObjectTextureGlobal [0, "data\kebapbox.paa"];
+
+[_killerKebapDriver, "GestureAgonyCargo"] call ace_common_fnc_doGesture;
+
+
 
 private _approachPath = [];
 private _startMarkerNumber = 1;
