@@ -44,3 +44,10 @@ class escort_pee3
 	sound[]	= {"\USER\sounds\Escort_Pee3.ogg", db + 10, 1.0 };
 	titles[] = {};
 };
+
+class kebapsong
+{
+	name	= "kebapsong";
+	sound[]	= {"\USER\sounds\kebapsong.ogg", db + 10, 1.0 };
+	titles[] = {};
+};

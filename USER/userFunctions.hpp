@@ -13,4 +13,5 @@ class GRAD_SilentRain {
 	#include "functions\zeus\CfgFunctions.hpp"
 	#include "functions\killerKebap\CfgFunctions.hpp"
 	#include "functions\hooker\CfgFunctions.hpp"
+	#include "functions\grasscutter\CfgFunctions.hpp"
 };

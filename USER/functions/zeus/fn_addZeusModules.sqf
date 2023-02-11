@@ -1,6 +1,6 @@
-
+//// CALLS
 [
-	"Silent Rain",
+	"Silent Rain Calls",
 	"Start Escort Call",
 	{ 
 		params ["_modulePosition"]; 
@@ -14,7 +14,7 @@
 ] call zen_custom_modules_fnc_register;
 
 [
-	"Silent Rain",
+	"Silent Rain Calls",
 	"Start Food Call",
 	{ 
 		params ["_modulePosition"]; 
@@ -28,7 +28,7 @@
 ] call zen_custom_modules_fnc_register;
 
 [
-	"Silent Rain",
+	"Silent Rain Calls",
 	"Start EVAC Call (Combat)",
 	{ 
 		params ["_modulePosition"]; 
@@ -42,7 +42,7 @@
 ] call zen_custom_modules_fnc_register;
 
 [
-	"Silent Rain",
+	"Silent Rain Calls",
 	"Start EVAC Call (Normal)",
 	{ 
 		params ["_modulePosition"]; 
@@ -54,3 +54,18 @@
 		};
 	}
 ] call zen_custom_modules_fnc_register;
+
+
+
+//// SPAWNS
+
+[
+	"Silent Rain Spawns",
+	"Start Killerkebap Car",
+	{ 
+		params ["_modulePosition"]; 
+		
+		[GRAD_Approach_1] call grad_SR_fnc_killerKebap_spawnCar;
+	}
+] call zen_custom_modules_fnc_register;
+
