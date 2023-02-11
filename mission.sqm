@@ -8,7 +8,7 @@ class EditorData
 	toggles=1;
 	class ItemIDProvider
 	{
-		nextID=12195;
+		nextID=12197;
 	};
 	class MarkerIDProvider
 	{
@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=1405;
+		nextID=1427;
 	};
 	class Camera
 	{
-		pos[]={4857.7593,95.488617,2858.1885};
-		dir[]={0.26213729,-0.60591167,0.75110257};
-		up[]={0.19965515,0.79553193,0.57207233};
-		aside[]={0.9441514,0,-0.32951197};
+		pos[]={5892.0669,247.08601,7452.9141};
+		dir[]={0.27947539,-0.72622538,0.6280846};
+		up[]={0.2952362,0.68745667,0.66350502};
+		aside[]={0.91363513,1.4901161e-008,-0.40653527};
 	};
 };
 binarizationWanted=0;
@@ -2794,7 +2794,7 @@ class Mission
 	};
 	class Entities
 	{
-		items=163;
+		items=165;
 		class Item0
 		{
 			dataType="Layer";
@@ -5888,7 +5888,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=-0.030853271;
+			atlOffset=-153.59554;
 		};
 		class Item2
 		{
@@ -33162,8 +33162,8 @@ class Mission
 					dataType="Logic";
 					class PositionInfo
 					{
-						position[]={5913.3223,145.41304,7771.3926};
-						angles[]={6.267931,5.0303359,0.0050033992};
+						position[]={5913.3218,145.41304,7771.3931};
+						angles[]={6.267931,5.0303359,0.0050090947};
 					};
 					areaSize[]={300,0,150};
 					areaIsRectangle=1;
@@ -33194,7 +33194,7 @@ class Mission
 								class data
 								{
 									singleType="BOOL";
-									value=0;
+									value=1;
 								};
 							};
 						};
@@ -33203,7 +33203,6 @@ class Mission
 				};
 			};
 			id=8859;
-			atlOffset=0.28475952;
 		};
 		class Item84
 		{
@@ -40879,14 +40878,38 @@ class Mission
 		class Item162
 		{
 			dataType="Marker";
-			position[]={5863.4297,142.92128,7635.2524};
-			name="grasscutter";
+			position[]={5975.8994,144.37915,7745.4165};
+			name="grasscutter_1";
 			markerType="RECTANGLE";
 			type="";
-			a=200;
-			b=500;
-			angle=14.970999;
+			a=100;
+			b=300;
+			angle=17.641712;
 			id=12194;
+		};
+		class Item163
+		{
+			dataType="Marker";
+			position[]={5836.1035,145.49614,7785.2822};
+			name="grasscutter_2";
+			markerType="RECTANGLE";
+			type="";
+			a=50;
+			b=300;
+			angle=17.641996;
+			id=12195;
+		};
+		class Item164
+		{
+			dataType="Marker";
+			position[]={5772.9551,140.64664,7452.4834};
+			name="grasscutter_3";
+			markerType="RECTANGLE";
+			type="";
+			a=50;
+			b=300;
+			angle=17.641994;
+			id=12196;
 		};
 	};
 	class Connections

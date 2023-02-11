@@ -19,5 +19,6 @@
     };
 } forEach allMapMarkers;
 
-
-{ deleteVehicle _x; } forEach allMissionObjects "Land_ClutterCutter_large_F";
+[{
+	{ deleteVehicle _x; } forEach allMissionObjects "Land_ClutterCutter_large_F";
+}, [], 10] call CBA_fnc_waitAndExecute;
