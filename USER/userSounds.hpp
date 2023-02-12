@@ -538,6 +538,519 @@ class nadia_yes_1_seduce
 
 
 
+// KHALIL
+
+class khalil_yes_1_pleading
+{
+	name	= "khalil_yes_1_pleading";
+	sound[]	= {"\USER\sounds\khalil_yes_1_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_yes_2_pleading
+{
+	name	= "khalil_yes_2_pleading";
+	sound[]	= {"\USER\sounds\khalil_yes_2_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_yes_3_pleading
+{
+	name	= "khalil_yes_3_pleading";
+	sound[]	= {"\USER\sounds\khalil_yes_3_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_russian_1_pleading
+{
+	name	= "khalil_russian_1_pleading";
+	sound[]	= {"\USER\sounds\khalil_russian_1_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_russian_2_pleading
+{
+	name	= "khalil_russian_2_pleading";
+	sound[]	= {"\USER\sounds\khalil_russian_2_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_russian_3_pleading
+{
+	name	= "khalil_russian_3_pleading";
+	sound[]	= {"\USER\sounds\khalil_russian_3_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_russian_4_pleading
+{
+	name	= "khalil_russian_4_pleading";
+	sound[]	= {"\USER\sounds\khalil_russian_4_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_russian_5_pleading
+{
+	name	= "khalil_russian_5_pleading";
+	sound[]	= {"\USER\sounds\khalil_russian_5_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+
+class khalil_pleasedonthurt_1_pleading
+{
+	name	= "khalil_pleasedonthurt_1_pleading";
+	sound[]	= {"\USER\sounds\khalil_pleasedonthurt_1_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_pleasedonthurt_2_pleading
+{
+	name	= "khalil_pleasedonthurt_2_pleading";
+	sound[]	= {"\USER\sounds\khalil_pleasedonthurt_2_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_no_1_pleading
+{
+	name	= "khalil_no_1_pleading";
+	sound[]	= {"\USER\sounds\khalil_no_1_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_no_2_pleading
+{
+	name	= "khalil_no_2_pleading";
+	sound[]	= {"\USER\sounds\khalil_no_2_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+
+class khalil_letmego_1_pleading
+{
+	name	= "khalil_letmego_1_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_1_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_letmego_2_pleading
+{
+	name	= "khalil_letmego_2_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_2_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_letmego_3_pleading
+{
+	name	= "khalil_letmego_3_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_3_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_letmego_4_pleading
+{
+	name	= "khalil_letmego_4_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_4_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_letmego_5_pleading
+{
+	name	= "khalil_letmego_5_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_5_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_letmego_6_pleading
+{
+	name	= "khalil_letmego_6_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_6_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_greet_1_pleading
+{
+	name	= "khalil_greet_1_pleading";
+	sound[]	= {"\USER\sounds\khalil_greet_1_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_greet_1_angry
+{
+	name	= "khalil_greet_1_angry";
+	sound[]	= {"\USER\sounds\khalil_greet_1_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_dontknow_1_pleading
+{
+	name	= "khalil_dontknow_1_pleading";
+	sound[]	= {"\USER\sounds\khalil_dontknow_1_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_dontknow_2_pleading
+{
+	name	= "khalil_dontknow_2_pleading";
+	sound[]	= {"\USER\sounds\khalil_dontknow_2_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_dontknow_3_pleading
+{
+	name	= "khalil_dontknow_3_pleading";
+	sound[]	= {"\USER\sounds\khalil_dontknow_3_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_dontknow_4_pleading
+{
+	name	= "khalil_dontknow_4_pleading";
+	sound[]	= {"\USER\sounds\khalil_dontknow_4_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+class khalil_detected_1_angry
+{
+	name	= "khalil_detected_1_angry";
+	sound[]	= {"\USER\sounds\khalil_detected_1_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_detected_2_angry
+{
+	name	= "khalil_detected_2_angry";
+	sound[]	= {"\USER\sounds\khalil_detected_2_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_detected_3_angry
+{
+	name	= "khalil_detected_3_angry";
+	sound[]	= {"\USER\sounds\khalil_detected_3_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_detected_4_angry
+{
+	name	= "khalil_detected_4_angry";
+	sound[]	= {"\USER\sounds\khalil_detected_4_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_detected_5_angry
+{
+	name	= "khalil_detected_5_angry";
+	sound[]	= {"\USER\sounds\khalil_detected_5_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_detected_6_angry
+{
+	name	= "khalil_detected_6_angry";
+	sound[]	= {"\USER\sounds\khalil_detected_6_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+
+class khalil_curse_1_angry
+{
+	name	= "khalil_curse_1_angry";
+	sound[]	= {"\USER\sounds\khalil_curse_1_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_curse_2_angry
+{
+	name	= "khalil_curse_2_angry";
+	sound[]	= {"\USER\sounds\khalil_curse_2_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_curse_3_angry
+{
+	name	= "khalil_curse_3_angry";
+	sound[]	= {"\USER\sounds\khalil_curse_3_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_curse_4_angry
+{
+	name	= "khalil_curse_4_angry";
+	sound[]	= {"\USER\sounds\khalil_curse_4_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_curse_5_angry
+{
+	name	= "khalil_curse_5_angry";
+	sound[]	= {"\USER\sounds\khalil_curse_5_angry.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>Yes</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
 // KILLERKEBAP
 class kebapsong
 {

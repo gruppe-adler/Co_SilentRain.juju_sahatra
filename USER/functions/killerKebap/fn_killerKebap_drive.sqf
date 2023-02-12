@@ -12,13 +12,46 @@ _killerKebapDriver setBehaviour "CARELESS";
 
 sleep 2;
 
-_killerKEbapdriver addUniform "UK3CB_ADC_C_Shorts_U_04";
+_killerKebapDriver addUniform "UK3CB_ADC_C_Shorts_U_04";
 
-private _kebapbox = "EauDeCombat_01_box_F" createVehicle [0,0,0];
-_kebapbox attachTo [_killerkebapdriver, [0,0,0], "lefthand", true];
-_kebapbox setObjectTextureGlobal [0, "data\kebapbox.paa"];
 
-[_killerKebapDriver, "GestureAgonyCargo"] call ace_common_fnc_doGesture;
+_killerKebapDriver addEventHandler ["GetOutMan", {
+	params ["_unit", "_role", "_vehicle", "_turret"];
+
+	if (local _unit) then {
+		[_unit] call grad_SR_fnc_killerKebap_carryKebap;
+	};
+}];
+
+_killerKebapDriver addMPEventHandler ["MPKilled", { 
+	params ["_unit", "_killer", "_instigator", "_useEffects"];
+	
+	if (local _unit) then {
+		[_unit] call grad_SR_fnc_killerKebap_dropKebap;
+	};
+ }];
+
+[_killerKebapDriver, "khalil"] remoteExec ["grad_SR_fnc_customInteractions_addAction", [0,-2] select isDedicated, _killerKebapDriver];
+
+_killerKebapDriver addAction
+[
+	"Drop Kebap",	// title
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"]; // script
+
+		[_caller] call grad_SR_fnc_killerKebap_dropKebap;
+	},
+	nil,		// arguments
+	1.5,		// priority
+	true,		// showWindow
+	true,		// hideOnUse
+	"",			// shortcut
+	"!isNull (_this getvariable ['grad_SR_kebapbox', objNull])", 	// condition
+	50,			// radius
+	false,		// unconscious
+	"",			// selection
+	""			// memoryPoint
+];
 
 
 
