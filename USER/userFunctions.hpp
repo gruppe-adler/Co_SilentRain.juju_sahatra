@@ -14,4 +14,5 @@ class GRAD_SilentRain {
 	#include "functions\killerKebap\CfgFunctions.hpp"
 	#include "functions\hooker\CfgFunctions.hpp"
 	#include "functions\grasscutter\CfgFunctions.hpp"
+	#include "functions\custominteractions\CfgFunctions.hpp"
 };
