@@ -32,6 +32,7 @@ private _pathBtr_1 = [];
 private _pathPickup_1 = [];
 private _pathVodnik = [];
 private _pathPickup_2 = [];
+private _stopPos = [];
 
 GRAD_WARLORD_POSITION = 3;
 switch (GRAD_WARLORD_POSITION) do {
@@ -59,8 +60,9 @@ switch (GRAD_WARLORD_POSITION) do {
 	case 3: {
 		systemChat "Warlord Position 3";
 
+		// CREATE PATHS
 		private _pos3Path = [];
-		_finishMarkerNumber = 34;
+		_finishMarkerNumber = 22;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_%1", _i]);
@@ -69,9 +71,10 @@ switch (GRAD_WARLORD_POSITION) do {
 		};
 
 		_path = _approachPath + _pos3Path;
+		_stopPos = _pos3Path select ((count _pos3Path) - 1);
 
 		private _pos3_btr_path = [];
-		_finishMarkerNumber = 2;
+		_finishMarkerNumber = 17;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_btr_%1", _i]);
@@ -81,7 +84,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathBtr_1 = _path + _pos3_btr_path;
 
 		private _pos3_pickup1_path = [];
-		_finishMarkerNumber = 10;
+		_finishMarkerNumber = 20;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_pickup1_%1", _i]);
@@ -91,7 +94,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathPickup_1 = _path + _pos3_pickup1_path;
 
 		private _pos3_vodnik_path = [];
-		_finishMarkerNumber = 16;
+		_finishMarkerNumber = 12;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_vodnik_%1", _i]);
@@ -101,7 +104,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathVodnik = _path + _pos3_vodnik_path;
 
 		private _pos3_pickup2_path = [];
-		_finishMarkerNumber = 25;
+		_finishMarkerNumber = 15;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos3_pickup2_%1", _i]);
@@ -109,59 +112,109 @@ switch (GRAD_WARLORD_POSITION) do {
 			_pos3_pickup2_path pushBack _point;
 		};
 		_pathPickup_2 = _path + _pos3_pickup2_path;
+
+		// SPECIAL SPEED ADJUSTMENTS
+		// Prevent Pickup_1 from flying of the cliffs near the villa
+		[
+			{
+				params ["_veh"];
+				_veh inArea [[2343.53,6725.28,0], 5, 5, 0, false]
+			},
+			{
+				params ["_veh"];
+				_veh forceSpeed 15;
+				[
+					{
+						params ["_veh"];
+						_veh forceSpeed -1;
+					},
+					[_veh],
+					5
+				] call CBA_fnc_waitAndExecute;
+			},
+			[_pickup_1]
+		] call CBA_fnc_waitUntilAndExecute;
 	};
 };
 
 {
-	_x params ["_veh", "_path"];
+	_x params ["_veh", "_path", ["_grps", []], ["_vehStr", ""]];
+	
 	_veh setDriveOnPath _path;
-} forEach [[_btr_1, _pathBtr_1], [_pickup_1, _pathPickup_1], [_pickup_2, _pathPickup_2], [_vodnik, _pathVodnik]];
+	
+	if (_grps isEqualTo []) then { continue };
+
+	// HANDLE TRANSPORTS
+	[
+		{
+			params ["_veh", "_grps", "_path", "_vehStr"];
+			_veh inArea [_path select ((count _path) - 1), 10, 10, 0, false]
+		},
+		{
+			params ["_veh", "_grps", "_path", "_vehStr"];
+
+			[
+				{
+					params ["_veh", "_grps", "_vehStr"];
+					_grps params ["_crew", "_transport"];
+
+					private _unloadPos = AGLToASL (_veh getRelPos [10, 180]);
+					private _wp = _crew addWaypoint [_unloadPos, -1];
+					_wp setWaypointType "TR UNLOAD";
+					_wp setWaypointBehaviour "AWARE";
+
+					switch (_vehStr) do {
+						case "Pickup 1": {
+							private _attackWP = _transport addWaypoint [AGLToASL [2298.72,6582.42,0], -1];
+							_attackWP setWaypointType "SAD";
+							_attackWP setWaypointSpeed "FULL";
+							systemChat "Unloading Pickup 1";
+						};
+
+						case "Pickup 2": {
+							private _attackWP = _transport addWaypoint [AGLToASL [2247.92,6591.48,0], -1];
+							_attackWP setWaypointType "SAD";
+							_attackWP setWaypointSpeed "FULL";
+							systemChat "Unloading Pickup 2";
+						};
+						case "Vodnik": {
+							[_transport, [2295.96,6663.58,0], 50] spawn lambs_wp_fnc_taskCQB;
+							systemChat "Unloading Vodnik";
+						};
+					};
+				},
+				[_veh, _grps, _vehStr],
+				2
+			] call CBA_fnc_waitAndExecute;
+		},
+		[_veh, _grps, _path, _vehStr]
+	] call CBA_fnc_waitUntilAndExecute
+} forEach [
+			[_btr_1, _pathBtr_1],
+			[_pickup_1, _pathPickup_1, [_pickup_1_crewGroup, _pickup_1_transportGroup], "Pickup 1"],
+			[_pickup_2, _pathPickup_2, [_pickup_2_crewGroup, _pickup_2_transportGroup], "Pickup 2"],
+			[_vodnik, _pathVodnik, [_vodnik_crewGroup, _vodnik_transportGroup], "Vodnik"]
+		  ];
 
 _handle = 
 [
 	{
-		params ["_vehiclesPaths", "_handle"];
+		params ["_args", "_handle"];
+		_args params ["_vehicles", "_stopPos"];
 
-		private _lead = (_vehiclesPaths select 0) select 0;
-		private _leadPath = (_vehiclesPaths select 0) select 1;
-		if (_lead inArea [_leadPath select ((count _leadPath) - 1), 5, 5, 0, false]) exitWith {
-			for "_i" from 1 to ((count _vehiclesPaths) - 1) do {
-				private _veh = (_vehiclesPaths select _i) select 0;
-				_veh forceSpeed -18;				
-			};
-			systemChat "Stopping handler";
-			[
-				{
-					params ["_veh"];
-					_veh inArea [[2266.66,6617.2,0], 5, 5, 0, false]
-				},
-				{
-					params ["_veh"];
-					_veh forceSpeed 10;
-					systemChat "slowing pickup 2";
-				},
-				[(_vehiclesPaths select 2) select 0]
-			] call CBA_fnc_waitUntilAndExecute;
-
-			[
-				{
-					params ["_veh"];
-					_veh inArea [[2220.42,6543.28,0], 5, 5, 0, false]
-				},
-				{
-					params ["_veh"];
-					_veh forceSpeed 10;
-					systemChat "slowing pickup 1";
-				},
-				[(_vehiclesPaths select 1) select 0]
-			] call CBA_fnc_waitUntilAndExecute;			
+		private _lead = _vehicles select 0;
+		if (_lead inArea [_stopPos, 20, 20, 0, false]) exitWith {
+			for "_i" from 1 to ((count _vehicles) - 1) do {
+				private _veh = _vehicles select _i;
+				_veh forceSpeed -1;				
+			};		
 			[_handle] call CBA_fnc_removePerFrameHandler;
 		};
 
 		// systemChat format["0: %1",(speed _lead) / 3.6];
-		for "_i" from 1 to ((count _vehiclesPaths) - 1) do {
-			private _veh = (_vehiclesPaths select _i) select 0;
-			private _inFront = (_vehiclesPaths select (_i - 1)) select 0;
+		for "_i" from 1 to ((count _vehicles) - 1) do {
+			private _veh = _vehicles select _i;
+			private _inFront = _vehicles select (_i - 1);
 			private _speedFront = (speed _inFront) / 3.6;
 			private _dist = _veh distance _inFront;
 
@@ -174,6 +227,6 @@ _handle =
 			// systemChat format["%1: %2", _i, _aim];
 		};
 	},
-	0,
-	[[_btr_1, _pathBtr_1], [_pickup_1, _pathPickup_1], [_pickup_2, _pathPickup_2], [_vodnik, _pathVodnik]]
+	1,
+	[[_btr_1, _pickup_1, _pickup_2, _vodnik], _stopPos]
 ] call CBA_fnc_addPerFrameHandler;
