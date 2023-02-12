@@ -77,4 +77,175 @@ if (_name == "nadia") then {
 		"",			// selection
 		""			// memoryPoint
 	];
+
+
+	_unit addAction
+	[
+		"Confused",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "confused"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'confused', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+	_unit addAction
+	[
+		"Greet",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "greet"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'greet', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+
+	_unit addAction
+	[
+		"dontknow",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "dontknow"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'dontknow', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+
+	_unit addAction
+	[
+		"no",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "no"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'no', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+	_unit addAction
+	[
+		"quasimdead",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "quasimdead"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'quasimdead', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+	_unit addAction
+	[
+		"quasimlove",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "quasimlove"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'quasimlove', (_originalTarget getVariable ['grad_SR_emotion', 'seduce'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+	_unit addAction
+	[
+		"whatshappening",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "whatshappening"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'whatshappening', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+	_unit addAction
+	[
+		"yes",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, "yes"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"(['nadia', 'yes', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
 };

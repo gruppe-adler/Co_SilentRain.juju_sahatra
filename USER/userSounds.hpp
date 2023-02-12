@@ -466,20 +466,6 @@ class nadia_yes_1_calm
 	titlesStructured = true;    // treat titles as Structured Text 
 };
 
-class nadia_yes_1_calm
-{
-	name	= "nadia_yes_1_calm";
-	sound[]	= {"\USER\sounds\nadia_yes_1_calm.ogg", db + 10, 1.0 };
-	titles[] = {
-			1, "<t color='#ffffff' shadow='2'>Yes</t>"
-		};
-
-	forceTitles = true;            // will display titles even if global show titles option is off
-	titlesFont = "RobotoCondensed";        // titles font family
-	titlesSize = 0.1;            // titles font size
-	titlesStructured = true;    // treat titles as Structured Text 
-};
-
 class nadia_yes_1_fear
 {
 	name	= "nadia_yes_1_fear";
