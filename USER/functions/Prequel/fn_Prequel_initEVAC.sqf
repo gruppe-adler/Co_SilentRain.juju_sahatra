@@ -34,7 +34,9 @@ private _pathVodnik = [];
 private _pathPickup_2 = [];
 private _stopPos = [];
 
-GRAD_WARLORD_POSITION = 3;
+if (!isMultiplayer) then {
+	GRAD_WARLORD_POSITION = 3;
+};
 switch (GRAD_WARLORD_POSITION) do {
 	case 1: {
 		systemChat "Warlord Position 1";
