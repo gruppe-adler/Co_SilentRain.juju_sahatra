@@ -6,7 +6,7 @@ private _puddle = createSimpleObject ["WaterSpill_01_Small_New_F", [0,0,0], true
 private _position = _hooker getPos [0.25, getDir _Hooker];
 _puddle setPos [_position#0, _position#1, _position#2+0.1];
 _puddle setObjectScale 0.02;
-private _sound = _hooker say3D "escort_pee2";
+private _sound = _hooker say3D "nadia_pee";
 
 _stream = "#particlesource" createVehicleLocal [0,0,0];
 _stream setParticleRandom [0,[0.004,0.004,0.004],[0.01,0.01,0.01],30,0.01,[0,0,0,0],1,0.02,360];

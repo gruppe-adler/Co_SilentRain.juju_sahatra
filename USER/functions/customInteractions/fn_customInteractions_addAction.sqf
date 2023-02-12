@@ -59,6 +59,27 @@ if (_name == "nadia") then {
 
 	_unit addAction
 	[
+		"<t color='#FFD966'>Pee Now (Animation)</t>",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller] remoteExecCall ["grad_SR_fnc_hooker_animSquatStart", 0];
+			
+		},
+		nil,		// arguments
+		2,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"true", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+	_unit addAction
+	[
 		"Pee Before",	// title
 		{
 			params ["_target", "_caller", "_actionId", "_arguments"]; // script

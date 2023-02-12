@@ -25,7 +25,7 @@ _unit switchMove "Acts_Executioner_Squat_End";
         _unit setMimic "neutral";
         _unit switchMove "";
         _unit setAnimSpeedCoef 1;
-        _unit say3D "escort_pee3";
+        _unit say3D "nadia_peeAfter_1_calm";
     }, [_unit]] call CBA_fnc_waitUntilAndExecute;
 
 }, [_unit]] call CBA_fnc_execNextFrame;
