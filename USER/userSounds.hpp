@@ -31,20 +31,45 @@ class evac_call_normal
 	titles[] = {};
 };
 
-class escort_pee2
+
+// NADIA
+class nadia_pee
 {
-	name	= "escort_pee2";
-	sound[]	= {"\USER\sounds\Escort_Pee2.ogg", db + 10, 1.0 };
+	name	= "nadia_pee";
+	sound[]	= {"\USER\sounds\nadia_pee.ogg", db + 10, 1.0 };
 	titles[] = {};
 };
 
-class escort_pee3
+class nadia_peeBefore_1_fear
 {
-	name	= "escort_pee3";
-	sound[]	= {"\USER\sounds\Escort_Pee3.ogg", db + 10, 1.0 };
-	titles[] = {};
+	name	= "nadia_peeBefore_1_fear";
+	sound[]	= {"\USER\sounds\nadia_peeBefore_1_fear.ogg", db + 10, 1.0 };
+	titles[] = {
+			1, "<t color='#ff0000' shadow='2'>I need to pee</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensed";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
 };
 
+class nadia_peeAfter_1_calm
+{
+	name	= "nadia_peeAfter_1_calm";
+	sound[]	= {"\USER\sounds\nadia_peeAfter_1_calm.ogg", db + 10, 1.0 };
+	titles[] = {
+			1, "<t color='#ff0000' shadow='2'>Ah, that was necessary</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensed";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+
+// KILLERKEBAP
 class kebapsong
 {
 	name	= "kebapsong";
