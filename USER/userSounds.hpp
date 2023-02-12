@@ -820,6 +820,34 @@ class khalil_letmego_7_pleading
 	titlesStructured = true;    // treat titles as Structured Text 
 };
 
+class khalil_letmego_8_pleading
+{
+	name	= "khalil_letmego_8_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_8_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>I'm innocent!</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
+class khalil_letmego_9_pleading
+{
+	name	= "khalil_letmego_9_pleading";
+	sound[]	= {"\USER\sounds\khalil_letmego_9_pleading.ogg", db + 10, 1.0 };
+	titles[] = {
+			0, "<t color='#ffffff' shadow='2'>I'm just a simple delivery guy!</t>"
+		};
+
+	forceTitles = true;            // will display titles even if global show titles option is off
+	titlesFont = "RobotoCondensedBold";        // titles font family
+	titlesSize = 0.1;            // titles font size
+	titlesStructured = true;    // treat titles as Structured Text 
+};
+
 
 
 class khalil_greet_1_pleading
