@@ -5,5 +5,6 @@ class grad_custominteractions {
 	class custominteractions_changeEmotion;
 	class custominteractions_getGestureAndSound;	
 	class custominteractions_play;
+	class custominteractions_playSoundLocal;
 	class custominteractions_getSoundCount;
 };

@@ -3,7 +3,7 @@ params ["_car"];
 if (isNull _car) exitWith {};
 if (!alive _car) exitWith {};
 
-private _song = _car say3d "kebapsong";
+private _song = _car say3d ["kebapsong", 200];
 
 [{
 	params ["_song", "_car"];

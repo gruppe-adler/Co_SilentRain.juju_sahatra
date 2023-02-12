@@ -6,6 +6,7 @@ private _emotion = _unit getVariable ["grad_SR_emotion", "fear"];
 private _soundCount = [_name, _type, _emotion] call grad_SR_fnc_customInteractions_getSoundCount;
 private _gestures = [_type] call grad_SR_fnc_customInteractions_getGestureAndSound;
 
+if (_soundCount < 1) exitWith { hint "error, no sounds"; };
 // systemChat ("sound count : " + str _soundCount);
 private _allSounds = [];
 for "_i" from 1 to _soundCount do { 
@@ -18,7 +19,7 @@ private _soundsAlreadyUsedCompare = _soundsUsed arrayIntersect _allSounds;
 
 private _soundsLeft = _allSounds - _soundsAlreadyUsedCompare;
 
-// systemChat str (_soundsLeft);
+// systemChat str (_allSounds);
 
 private _randomSound = selectRandom _soundsLeft; 
 
@@ -44,5 +45,5 @@ if (count _gestures > 0) then {
 	[_unit, _gesture, 1] call ace_common_fnc_doGesture;
 };
 
-[_unit, _soundName] remoteExec ["say3d"];
+[_unit, _soundName] remoteExec ["grad_SR_fnc_customInteractions_playSoundLocal"];
 // systemChat "playing";

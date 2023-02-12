@@ -50,11 +50,51 @@ _killerKebapDriver addAction
 		[_caller] call grad_SR_fnc_killerKebap_dropKebap;
 	},
 	nil,		// arguments
-	1.5,		// priority
+	2,		// priority
 	true,		// showWindow
 	true,		// hideOnUse
 	"",			// shortcut
 	"!isNull (_this getvariable ['grad_SR_kebapbox', objNull])", 	// condition
+	50,			// radius
+	false,		// unconscious
+	"",			// selection
+	""			// memoryPoint
+];
+
+_killerKebapDriver addAction
+[
+	"Carry Gesture",	// title
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"]; // script
+
+		[_caller, "GestureAgonyCargo"] call ace_common_fnc_doGesture;
+	},
+	nil,		// arguments
+	1.5,		// priority
+	true,		// showWindow
+	true,		// hideOnUse
+	"",			// shortcut
+	"!isNull (_this getvariable ['grad_SR_kebapbox', objNull]) && gestureState _this != 'GestureAgonyCargo'", 	// condition
+	50,			// radius
+	false,		// unconscious
+	"",			// selection
+	""			// memoryPoint
+];
+
+_killerKebapDriver addAction
+[
+	"Stop Carry Gesture",	// title
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"]; // script
+
+		[_caller, "GestureEmpty"] call ace_common_fnc_doGesture;
+	},
+	nil,		// arguments
+	1.5,		// priority
+	true,		// showWindow
+	true,		// hideOnUse
+	"",			// shortcut
+	"!isNull (_this getvariable ['grad_SR_kebapbox', objNull]) && gestureState _this == 'GestureAgonyCargo'", 	// condition
 	50,			// radius
 	false,		// unconscious
 	"",			// selection
