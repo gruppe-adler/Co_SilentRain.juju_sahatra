@@ -19,7 +19,17 @@ _killerKebapDriver addEventHandler ["GetOutMan", {
 	params ["_unit", "_role", "_vehicle", "_turret"];
 
 	if (local _unit) then {
-		[_unit] call grad_SR_fnc_killerKebap_carryKebap;
+		private _kebapbox = [_unit] call grad_SR_fnc_killerKebap_spawnKebap;
+		[_kebapbox, _unit] call grad_SR_fnc_killerKebap_carryKebap;
+	};
+}];
+
+_killerKebapDriver addEventHandler ["GetInMan", {
+	params ["_unit", "_role", "_vehicle", "_turret"];
+
+	if (local _unit) then {
+		private _kebapbox = [_unit] getVariable ["grad_SR_kebapbox", objNull];
+		[_unit, _kebapbox] call grad_SR_fnc_killerKebap_deleteKebap;
 	};
 }];
 
