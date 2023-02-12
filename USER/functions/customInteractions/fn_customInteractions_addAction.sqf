@@ -12,7 +12,7 @@ _unit addEventHandler ["GestureDone", {
 // CHANGE EMOTION
 _unit addAction
 [
-	"Change Emotions",	// title
+	"<t color='#3366FF'>Change Emotion (CALM)</t>",	// title
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 		
@@ -24,7 +24,50 @@ _unit addAction
 	true,		// showWindow
 	true,		// hideOnUse
 	"",			// shortcut
-	"!(_this getVariable ['grad_SR_gestureRunning', false])", 	// condition
+	"!(_this getVariable ['grad_SR_gestureRunning', false]) && (_this getVariable ['GRAD_SR_emotion', 'calm']) == 'calm'", 	// condition
+	50,			// radius
+	false,		// unconscious
+	"",			// selection
+	""			// memoryPoint
+];
+
+_unit addAction
+[
+	"<t color='#33FF66'>Change Emotion (FEAR)</t>",	// title
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"]; // script
+		
+		[_caller] call grad_SR_fnc_customInteractions_changeEmotion;
+		
+	},
+	nil,		// arguments
+	6,		// priority
+	true,		// showWindow
+	true,		// hideOnUse
+	"",			// shortcut
+	"!(_this getVariable ['grad_SR_gestureRunning', false]) && (_this getVariable ['GRAD_SR_emotion', 'none']) == 'fear'", 	// condition
+	50,			// radius
+	false,		// unconscious
+	"",			// selection
+	""			// memoryPoint
+];
+
+
+_unit addAction
+[
+	"<t color='#FF3366'>Change Emotion (SEDUCE)</t>",	// title
+	{
+		params ["_target", "_caller", "_actionId", "_arguments"]; // script
+		
+		[_caller] call grad_SR_fnc_customInteractions_changeEmotion;
+		
+	},
+	nil,		// arguments
+	6,		// priority
+	true,		// showWindow
+	true,		// hideOnUse
+	"",			// shortcut
+	"!(_this getVariable ['grad_SR_gestureRunning', false]) && (_this getVariable ['GRAD_SR_emotion', 'none'] == 'seduce')", 	// condition
 	50,			// radius
 	false,		// unconscious
 	"",			// selection

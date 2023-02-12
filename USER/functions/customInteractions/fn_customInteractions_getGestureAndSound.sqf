@@ -40,8 +40,9 @@ private _carryStop = [
 ];
 
 switch (_type) do {
-	case "approval": { _return = _approvalGestures; };
-	case "denial": { _return = _denialGestures; };
+	case "yes": { _return = _approvalGestures; };
+	case "idontknow": { _return = _denialGestures; };
+	case "no": { _return = _denialGestures; };
 	case "phoneStart": { _return = _phoneEar; };
 	case "phoneStop": { _return = _phoneStop; };
 	case "greet": { _return = _greetGestures; };

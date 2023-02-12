@@ -10,7 +10,7 @@ private _gestures = [_type] call grad_SR_fnc_customInteractions_getGestureAndSou
 private _randomSound = str (ceil (random _soundcount));
 private _emotion = _unit getVariable ["grad_SR_emotion", "fear"];
 
-systemChat (_name + "_" + _type + "_" + _randomSound + "_" + _emotion);
+// systemChat (_name + "_" + _type + "_" + _randomSound + "_" + _emotion);
 private _soundName = _name + "_" + _type + "_" + _randomSound + "_" + _emotion;
 
 
