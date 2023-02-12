@@ -6,13 +6,34 @@ private _emotion = _unit getVariable ["grad_SR_emotion", "fear"];
 private _soundCount = [_name, _type, _emotion] call grad_SR_fnc_customInteractions_getSoundCount;
 private _gestures = [_type] call grad_SR_fnc_customInteractions_getGestureAndSound;
 
-systemChat ("sound count : " + str _soundCount);
+// systemChat ("sound count : " + str _soundCount);
+private _allSounds = [];
+for "_i" from 1 to _soundCount do { 
+	_allSounds pushBack _i;
+};
 
-private _randomSound = str (ceil (random _soundcount));
+private _soundID = "grad_SR_customInteractionSoundsUsed_" + _name + _type;
+private _soundsUsed = _unit getVariable [_soundID, []];
+private _soundsAlreadyUsedCompare = _soundsUsed arrayIntersect _allSounds;
+
+private _soundsLeft = _allSounds - _soundsAlreadyUsedCompare;
+
+// systemChat str (_soundsLeft);
+
+private _randomSound = selectRandom _soundsLeft; 
+
+if (count _soundsLeft == 1) then {
+	_unit setVariable [_soundID, []];
+} else {
+	_soundsUsed pushBackUnique _randomSound;
+	_unit setVariable [_soundID, _soundsUsed];
+};
 
 
-// systemChat (_name + "_" + _type + "_" + _randomSound + "_" + _emotion);
-private _soundName = _name + "_" + _type + "_" + _randomSound + "_" + _emotion;
+// systemChat str _soundsUsed;
+
+
+private _soundName = _name + "_" + _type + "_" + str _randomSound + "_" + _emotion;
 
 
 
