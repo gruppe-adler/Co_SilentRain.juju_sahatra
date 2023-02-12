@@ -3,7 +3,7 @@ class grad_hooker {
 
 	tag = "grad_SR";
 
-	class hooker_animSquatEnd;
+	class hooker_spawn;
 	class hooker_animSquatStart;
 	class hooker_pee;
 };

@@ -1,5 +1,30 @@
 params ["_unit"];
 
+_unit addEventHandler ["AnimChanged", {
+	params ["_unit", "_anim"];
+
+    if (animationState _unit == toLower "Acts_Executioner_Squat_End") then {
+        _unit setAnimSpeedCoef 7;
+        _unit removeEventHandler ["AnimChanged", _thisEventHandler];
+    };
+}];
+
+_unit addEventHandler ["AnimDone", {
+	params ["_unit", "_anim"];
+
+    if (animationState _unit == toLower "Acts_Executioner_Squat_End") then {
+        _unit setAnimSpeedCoef 1;
+        _unit setVariable ["grad_SR_animationRunning", false, true];
+        _unit setMimic "neutral";
+        _unit switchMove "";
+        _unit setAnimSpeedCoef 1;
+        _unit say3D "nadia_peeAfter_1_calm";
+
+        _unit removeEventHandler ["AnimDone", _thisEventHandler];
+    };
+  
+}];
+
 _unit setVariable ["grad_SR_animationRunning", true, true];
 
 _unit switchMove "Acts_Executioner_Squat";

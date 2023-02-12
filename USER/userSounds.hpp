@@ -80,7 +80,7 @@ class nadia_dontknow_1_calm
 	name	= "nadia_dontknow_1_calm";
 	sound[]	= {"\USER\sounds\nadia_dontknow_1_calm.ogg", db + 10, 1.0 };
 	titles[] = {
-			0, "<t color='#ffffff' shadow='2'>This is a nightmare</t>"
+			0, "<t color='#ffffff' shadow='2'>I dont know</t>"
 		};
 
 	forceTitles = true;            // will display titles even if global show titles option is off
