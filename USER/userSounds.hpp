@@ -31,7 +31,12 @@ class evac_call_normal
 	titles[] = {};
 };
 
-
+class c130_sound
+{
+	name	= "c130_sound";
+	sound[]	= {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\ext_engine_hi.wss", db + 10, 1.0 };
+	titles[] = {};
+};
 
 
 
