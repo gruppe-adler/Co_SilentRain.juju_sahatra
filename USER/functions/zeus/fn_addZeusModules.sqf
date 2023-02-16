@@ -80,3 +80,17 @@
 		[_position] remoteExec ["grad_SR_fnc_hooker_spawn", 2];
 	}
 ] call zen_custom_modules_fnc_register;
+
+
+
+/// MISSION START 
+
+[
+	"Silent Rain Start",
+	"Execute Drop Sequence",
+	{ 
+		params ["_modulePosition"]; 
+		
+		[] remoteExec ["grad_drop_fnc_haloJumpExecute", 2];
+	}
+] call zen_custom_modules_fnc_register;
