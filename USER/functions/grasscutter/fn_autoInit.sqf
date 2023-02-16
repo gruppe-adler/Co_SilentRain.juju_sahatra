@@ -12,7 +12,7 @@
             for "_i" from -_mw to _mw step 7 do {
                 for "_j" from -_mh to _mh step 7 do {
                     // "Land_ClutterCutter_large_F" createVehicleLocal [_mx + _cos * _i + _sin * _j, _my + -_sin * _i + _cos * _j, 0];
-                    createSimpleObject [getMissionPath "USER\files\ClutterCutter_large_F.p3d", [_mx + _cos * _i + _sin * _j, _my + -_sin * _i + _cos * _j, 0]];
+                    createSimpleObject [getMissionPath "USER\files\ClutterCutter_large_F.p3d", [_mx + _cos * _i + _sin * _j, _my + -_sin * _i + _cos * _j, 0], true];
                 };
             };
         };
