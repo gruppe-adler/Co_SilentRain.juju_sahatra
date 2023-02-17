@@ -1,5 +1,13 @@
 params ["_call"];
 
+[
+	{
+		diwako_dui_main_toggled_off = true;
+	},
+	[],
+	6
+] call CBA_fnc_waitAndExecute;
+
 switch (_call) do {
 	case "food_call": {
 		playSound "food_call";
@@ -55,3 +63,4 @@ switch (_call) do {
 };
 
 BIS_fnc_EXP_camp_playSubtitles_terminate = true; // closes subtitles
+diwako_dui_main_toggled_off = false;

@@ -38,6 +38,14 @@
 		} else {
 			["evac_call_combat"] spawn grad_SR_fnc_Prequel_playCall;
 		};
+
+		[
+			{
+				[] call grad_SR_fnc_Prequel_initEvac;
+			},
+			[],
+			30
+		] call CBA_fnc_waitAndExecute;
 	}
 ] call zen_custom_modules_fnc_register;
 
@@ -52,6 +60,14 @@
 		} else {
 			["evac_call_normal"] spawn grad_SR_fnc_Prequel_playCall;
 		};
+
+		[
+			{
+				[] call grad_SR_fnc_Prequel_initEvac;
+			},
+			[],
+			25
+		] call CBA_fnc_waitAndExecute;
 	}
 ] call zen_custom_modules_fnc_register;
 

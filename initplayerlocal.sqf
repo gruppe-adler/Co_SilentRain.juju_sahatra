@@ -5,10 +5,9 @@ if (didJIP) then {
 ["InitializePlayer", [player,true]] call BIS_fnc_dynamicGroups;
 grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 
+if (!isMultiplayer) exitWith {};
 private _options = [1, 2, 3];
 _options deleteAt (_options find GRAD_WARLORD_POSITION);
-
-if (!isMultiplayer) exitWith {};
 
 {
 	(getMissionLayerEntities format["Warlord_Position_%1", _x]) params ["_objects", "_markers"];
