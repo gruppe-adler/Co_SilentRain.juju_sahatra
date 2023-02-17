@@ -31,48 +31,6 @@ class evac_call_normal
 	titles[] = {};
 };
 
-class c130_sound_ext_hi
-{
-	name	= "c130_sound_ext_hi";
-	sound[]	= {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\ext_engine_hi.wss", db + 20, 1.0 };
-	titles[] = {};
-};
-
-class c130_sound_ext_low
-{
-	name	= "c130_sound_ext_low";
-	sound[]	= {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\ext_engine_low.wss", db + 20, 1.0 };
-	titles[] = {};
-};
-
-class c130_sound_int_hi
-{
-	name	= "c130_sound_int_hi";
-	sound[]	= {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\int_engine_hi.wss", db + 20, 1.0 };
-	titles[] = {};
-};
-
-class c130_sound_int_low
-{
-	name	= "c130_sound_int_low";
-	sound[]	= {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\int_engine_low.wss", db + 20, 1.0 };
-	titles[] = {};
-};
-
-class c130_sound_int_forsage
-{
-	name	= "c130_sound_int_forsage";
-	sound[]	= {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\int_forsage_1.wss", db + 20, 1.0 };
-	titles[] = {};
-};
-
-
-class c130_sound_ext_forsage
-{
-	name	= "c130_sound_ext_forsage";
-	sound[]	= {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\ext_forsage_1.wss", db + 20, 1.0 };
-	titles[] = {};
-};
 
 
 

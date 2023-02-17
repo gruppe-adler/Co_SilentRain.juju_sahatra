@@ -8,3 +8,11 @@ onLoadMission = "";                                                             
 loadScreen = "data\loadpic.paa";                                                // Ladebild
 overviewPicture = "";                                                           // Bild, das in der Missionsauswahl angezeigt wird
 overviewText = "";                                                              // Text, der in der Missionsauswahl angezeigt wird
+
+class cfgSfx {
+	#include "..\node_modules\grad-drop\cfgSfx.hpp"
+};
+
+class cfgVehicles {
+	#include "..\node_modules\grad-drop\cfgVehicles.hpp"
+};
