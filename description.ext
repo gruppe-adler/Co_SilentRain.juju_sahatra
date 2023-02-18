@@ -30,6 +30,99 @@ enableDebugConsole[] = {
 #include "cfgIslands.hpp"
 #include "cfgCivilians.hpp"
 
+class cfgSfx {
+	
+    class c130_sound_ext_hi
+    {
+        sound0[] = {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\ext_engine_hi.wss",  db+3, 1.0, 150, 0, 0, 0, 0};
+        sounds[] = {sound0};
+        empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+    };
+
+    class c130_sound_ext_low
+    {
+        sound0[] = {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\ext_engine_low.wss",  db+3, 1.0, 150, 0, 0, 0, 0};
+        sounds[] = {sound0};
+        empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+    };
+
+    class c130_sound_int_hi
+    {
+        sound0[] = {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\int_engine_hi.wss",  db+3, 1.0, 150, 0, 0, 0, 0};
+        sounds[] = {sound0};
+        empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+    };
+
+    class c130_sound_int_low
+    {
+        sound0[] = {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\int_engine_low.wss",  db+3, 1.0, 150, 0, 0, 0, 0};
+        sounds[] = {sound0};
+        empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+    };
+
+    class c130_sound_int_forsage
+    {
+        sound0[] = {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\int_forsage_1.wss",  db+3, 1.0, 150, 0, 0, 0, 0};
+        sounds[] = {sound0};
+        empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+    };
+
+    class c130_sound_ext_forsage
+    {
+        sound0[] = {"@rhsusf\addons\rhsusf_a2port_air\data\sounds\c130\ext_forsage_1.wss",  db+3, 1.0, 150, 0, 0, 0, 0};
+        sounds[] = {sound0};
+        empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+    };
+
+
+    class kebap_song
+    {
+        sound0[] = {"user\sounds\kebapsong.ogg",  db+3, 1.0, 150, 0, 0, 0, 0};
+        sounds[] = {sound0};
+        empty[] = {"", 0, 0, 0, 0, 0, 0, 0};
+    };
+
+};
+
+class cfgVehicles {
+	
+    class c130_sound_ext_hi_sfx // class name to be used with createSoundSource
+    {
+        sound = "c130_sound_ext_hi"; // reference to CfgSFX class
+    };
+
+    class c130_sound_ext_low_sfx // class name to be used with createSoundSource
+    {
+        sound = "c130_sound_ext_low"; // reference to CfgSFX class
+    };
+
+    class c130_sound_int_hi_sfx // class name to be used with createSoundSource
+    {
+        sound = "c130_sound_int_hi"; // reference to CfgSFX class
+    };
+
+    class c130_sound_int_low_sfx // class name to be used with createSoundSource
+    {
+        sound = "c130_sound_int_low"; // reference to CfgSFX class
+    };
+
+    class c130_sound_int_forsage_sfx // class name to be used with createSoundSource
+    {
+        sound = "c130_sound_int_forsage"; // reference to CfgSFX class
+    };
+
+    class c130_sound_ext_forsage_sfx // class name to be used with createSoundSource
+    {
+        sound = "c130_sound_ext_forsage"; // reference to CfgSFX class
+    };
+
+    class kebap_song_sfx // class name to be used with createSoundSource
+    {
+        sound = "kebap_song"; // reference to CfgSFX class
+    };
+
+};
+
 class missionSettings {
 	#include "USER\missionSettings.hpp"
 
