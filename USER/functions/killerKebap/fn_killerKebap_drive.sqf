@@ -13,24 +13,6 @@ sleep 1;
 _killerKebapDriver addUniform "UK3CB_ADC_C_Shorts_U_04";
 
 
-_killerKebapDriver addEventHandler ["GetOutMan", {
-	params ["_unit", "_role", "_vehicle", "_turret"];
-
-	if (local _unit) then {
-		private _kebapbox = [_unit] call grad_SR_fnc_killerKebap_spawnKebap;
-		[_kebapbox, _unit] call grad_SR_fnc_killerKebap_carryKebap;
-	};
-}];
-
-_killerKebapDriver addEventHandler ["GetInMan", {
-	params ["_unit", "_role", "_vehicle", "_turret"];
-
-	if (local _unit) then {
-		private _kebapbox = [_unit] getVariable ["grad_SR_kebapbox", objNull];
-		[_unit, _kebapbox] call grad_SR_fnc_killerKebap_deleteKebap;
-	};
-}];
-
 _killerKebapDriver addMPEventHandler ["MPKilled", { 
 	params ["_unit", "_killer", "_instigator", "_useEffects"];
 	
@@ -40,66 +22,8 @@ _killerKebapDriver addMPEventHandler ["MPKilled", {
  }];
 
 [_killerKebapDriver, "khalil"] remoteExec ["grad_SR_fnc_customInteractions_addAction", [0,-2] select isDedicated, _killerKebapDriver];
+[_killerKebapDriver, "khalil"] remoteExec ["grad_SR_fnc_killerKebap_driverAddActions", [0,-2] select isDedicated, _killerKebapDriver];
 
-_killerKebapDriver addAction
-[
-	"Drop Kebap",	// title
-	{
-		params ["_target", "_caller", "_actionId", "_arguments"]; // script
-
-		[_caller] call grad_SR_fnc_killerKebap_dropKebap;
-	},
-	nil,		// arguments
-	2,		// priority
-	true,		// showWindow
-	true,		// hideOnUse
-	"",			// shortcut
-	"!isNull (_this getvariable ['grad_SR_kebapbox', objNull])", 	// condition
-	50,			// radius
-	false,		// unconscious
-	"",			// selection
-	""			// memoryPoint
-];
-
-_killerKebapDriver addAction
-[
-	"Carry Gesture",	// title
-	{
-		params ["_target", "_caller", "_actionId", "_arguments"]; // script
-
-		[_caller, "GestureAgonyCargo"] call ace_common_fnc_doGesture;
-	},
-	nil,		// arguments
-	1.5,		// priority
-	true,		// showWindow
-	true,		// hideOnUse
-	"",			// shortcut
-	"!isNull (_this getvariable ['grad_SR_kebapbox', objNull]) && gestureState _this != 'GestureAgonyCargo'", 	// condition
-	50,			// radius
-	false,		// unconscious
-	"",			// selection
-	""			// memoryPoint
-];
-
-_killerKebapDriver addAction
-[
-	"Stop Carry Gesture",	// title
-	{
-		params ["_target", "_caller", "_actionId", "_arguments"]; // script
-
-		[_caller, "GestureEmpty"] call ace_common_fnc_doGesture;
-	},
-	nil,		// arguments
-	1.5,		// priority
-	true,		// showWindow
-	true,		// hideOnUse
-	"",			// shortcut
-	"!isNull (_this getvariable ['grad_SR_kebapbox', objNull]) && gestureState _this == 'GestureAgonyCargo'", 	// condition
-	50,			// radius
-	false,		// unconscious
-	"",			// selection
-	""			// memoryPoint
-];
 
 
 private _approachPath = [];

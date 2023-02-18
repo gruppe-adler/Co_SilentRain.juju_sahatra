@@ -11,3 +11,5 @@ if (isNull _kebapbox) exitWith {
 detach _kebapbox;
 
 _unit setvariable ["grad_SR_kebapbox", objNull, true];
+
+// ["BIS_fnc_moduleRemoteControl_owner", objNull];
