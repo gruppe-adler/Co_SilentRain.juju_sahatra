@@ -21,9 +21,9 @@ class EditorData
 	class Camera
 	{
 		pos[]={5959.6641,170.9928,7869.0635};
-		dir[]={-0.28129727,-0.55857539,0.7803002};
-		up[]={-0.18943267,0.82945156,0.52547324};
-		aside[]={0.94073749,-6.5076165e-008,0.33913389};
+		dir[]={-0.17444335,-0.36422494,0.91483629};
+		up[]={-0.068220966,0.93131334,0.35777229};
+		aside[]={0.98231131,3.523528e-007,0.18730886};
 	};
 };
 binarizationWanted=0;
@@ -5186,10 +5186,10 @@ class Mission
 	{
 		resistanceWest=0;
 		timeOfChanges=1800.0002;
-		startWeather=0.30000001;
+		startWeather=0.53197753;
 		startWind=0.1;
 		startWaves=0.1;
-		forecastWeather=0.30000001;
+		forecastWeather=0.53197753;
 		forecastWind=0.1;
 		forecastWaves=0.1;
 		forecastLightnings=0.1;
@@ -9841,7 +9841,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, ""mrk_drop_1"", 200, 20, true, call grad_drop_fnc_haloJumpBeforeLocal, call grad_drop_fnc_haloJumpAfterLocal] call grad_drop_fnc_preparePlane;";
+				init="[this, ""mrk_drop_1"", 140, 20, true, call grad_drop_fnc_haloJumpBeforeLocal, call grad_drop_fnc_haloJumpAfterLocal] call grad_drop_fnc_preparePlane;";
 				reportOwnPosition=1;
 			};
 			id=4514;
@@ -36766,7 +36766,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="[this, ""mrk_drop_2"", 200, 20, true, call grad_drop_fnc_haloJumpBeforeLocal, call grad_drop_fnc_haloJumpAfterLocal] call grad_drop_fnc_preparePlane;";
+						init="[this, ""mrk_drop_2"", 140, 20, true, call grad_drop_fnc_haloJumpBeforeLocal, call grad_drop_fnc_haloJumpAfterLocal] call grad_drop_fnc_preparePlane;";
 						reportOwnPosition=1;
 					};
 					id=4513;
