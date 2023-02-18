@@ -6,11 +6,9 @@ if (didJIP) then {
 grad_template_ratingEH = player addEventHandler ["HandleRating",{0}];
 
 if (!isMultiplayer) exitWith {};
-private _options = [1, 2, 3];
-_options deleteAt (_options find GRAD_WARLORD_POSITION);
-
 {
-	(getMissionLayerEntities format["Warlord_Position_%1", _x]) params ["_objects", "_markers"];
+	_x params ["_objects", "_markers"];
+
 	{
 		_x enableSimulation false;
         _x hideObject true;
@@ -19,4 +17,4 @@ _options deleteAt (_options find GRAD_WARLORD_POSITION);
 	{
         deleteMarkerLocal _x;
 	} forEach _markers;
-} forEach _options;
+} forEach GRAD_LAYERS_TO_DELETE;
