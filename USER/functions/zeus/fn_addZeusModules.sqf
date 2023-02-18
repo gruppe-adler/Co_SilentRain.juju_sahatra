@@ -110,3 +110,14 @@
 		[] remoteExec ["grad_drop_fnc_haloJumpExecute", 2];
 	}
 ] call zen_custom_modules_fnc_register;
+
+
+[
+	"Silent Rain Start",
+	"Time Jump to Morning",
+	{ 
+		params ["_modulePosition"]; 
+		
+		[] remoteExec ["grad_drop_fnc_timeJump", [0,-2] select isDedicated];
+	}
+] call zen_custom_modules_fnc_register;
