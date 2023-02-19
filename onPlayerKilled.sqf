@@ -24,3 +24,9 @@ if (([missionConfigFile >> "missionSettings","waveRespawnEnabled",0] call BIS_fn
     setPlayerRespawnTime _respawnTime;
     forceRespawn player;
 };
+
+
+private _deaths = missionNamespace getVariable ["grad_SR_playerDeaths", "0"];
+
+
+missionNamespace setVariable ["grad_SR_playerDeaths", str ((parseNumber _deaths) + 1), true];

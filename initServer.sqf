@@ -14,3 +14,6 @@ GRAD_LAYERS_TO_DELETE = [];
 	GRAD_LAYERS_TO_DELETE pushBack (getMissionLayerEntities format["Warlord_Position_%1", _x]);
 } forEach _options;
 publicVariable "GRAD_LAYERS_TO_DELETE";
+
+
+missionNameSpace setVariable ["grad_SR_playerDeaths", str 0, true];

@@ -144,17 +144,6 @@ class missionSettings {
 	};
 };
 
-class CfgDebriefing
-{
-    class DefaultMissionEnd
-    {
-        title = "Mission completed";
-        subtitle = "Quasim is dead.";
-        description = "Extraction completed.";
-        picture = "data\gruppe-adler.paa";
-    };
-};
-
 
 //FUNCTIONS ====================================================================
 class CfgFunctions
@@ -257,5 +246,38 @@ class CfgGradFortifications {
 class Extended_InitPost_EventHandlers  {
 	class CAManBase {
 	   init = "params ['_u']; if (!(isPlayer _u) && {local _u}) then {[_u] call GRAD_Loadout_fnc_doLoadoutForUnit};";
+	};
+};
+
+
+class CfgDebriefing
+{  
+	class End_Success
+	{
+		title = "Mission Completed";
+		subtitle = "";
+		description = "You successfully eliminated Qasim.";
+		pictureBackground = "";
+		picture = "data\gruppe-adler.paa";
+		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+	};
+
+    class End_Failed
+	{
+		title = "Mission Failed";
+		subtitle = "";
+		description = "Qasim was able to flee.";
+		pictureBackground = "";
+		picture = "data\gruppe-adler.paa";
+		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+	};
+};
+
+class CfgDebriefingSections
+{
+	class Loot
+	{
+		title = "Player Casualties";
+		variable = "grad_SR_playerDeaths";
 	};
 };
