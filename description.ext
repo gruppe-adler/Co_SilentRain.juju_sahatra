@@ -18,10 +18,11 @@ reviveMode = 0;
 
 /*enableTargetDebug = 1;*/
 
-//mcdiod, nomisum
+//mcdiod, nomisum, Jules
 enableDebugConsole[] = {
 	"76561198044320063",
-	"76561197961080101"
+	"76561197961080101",
+    "76561198053987023"
 };
 
 #include "USER\missionInfo.hpp"

@@ -13,6 +13,11 @@ private _vodnikTransport = ["O_Soldier_SL_F", "O_Soldier_F", "O_Soldier_LAT_F", 
 (["UK3CB_ARD_O_GAZ_Vodnik", GRAD_spawn_vodnik, "O_Soldier_F", _vodnikTransport] call grad_SR_fnc_Prequel_spawnVehicle) params ["_vodnik", "_vodnik_crewGroup", "_vodnik_transportGroup"];
 // (["UK3CB_KRG_O_BTR60", GRAD_spawn_btr_2, "O_crew_F"] call grad_SR_fnc_Prequel_spawnVehicle) params ["_btr_2", "_btr_2_crewGroup"];
 
+_vodnik addEventHandler ["Hit", {
+	params ["_unit", "_source", "_damage", "_instigator"];
+	_damage * 0.2
+}];
+
 sleep 2;
 
 private _approachPath = [];
@@ -91,7 +96,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathPickup_1 = _path + _pos2_pickup1_path;
 
 		private _pos2_vodnik_path = [];
-		_finishMarkerNumber = 40;
+		_finishMarkerNumber = 38;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos2_vodnik_%1", _i]);
@@ -101,7 +106,7 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathVodnik = _path + _pos2_vodnik_path;
 
 		private _pos2_pickup2_path = [];
-		_finishMarkerNumber = 31;
+		_finishMarkerNumber = 45;
 		for "_i" from _startMarkerNumber to _finishMarkerNumber do
 		{
 			private _marker = call(compile format ["GRAD_Pos2_pickup2_%1", _i]);
@@ -111,74 +116,123 @@ switch (GRAD_WARLORD_POSITION) do {
 		_pathPickup_2 = _path + _pos2_pickup2_path;
 
 		// SPECIAL SPEED ADJUSTMENTS
-		// Prevent Pickup_1 from flying of the cliffs near the villa
-		// [
-		// 	{
-		// 		params ["_vehs", "_pos"];
-		// 		(_vehs select 0) inArea [_pos, 4, 4, 0, false]
-		// 	},
-		// 	{
-		// 		params ["_vehs"];
-				
-		// 		{
-		// 			_x forceSpeed 13;
-		// 		} forEach _vehs;
-		// 		systemChat ("limiting speed to " + str(13 * 3.6) + "kmh");
-		// 	},
-		// 	[[_btr_1, _pickup_1, _pickup_2, _vodnik], _stopPos]
-		// ] call CBA_fnc_waitUntilAndExecute;		
+		{
+			_x params ["_veh", "_vehStr"];
+			// REMOVE SPEED-LIMIT AFTER FIRST CORNER
+			[
+				{
+					params ["_veh", "_vehStr"];
+					_veh inArea [[2546.84,6325.67,0], 5, 5, 0, false, -1]
+				},
+				{
+					params ["_veh", "_vehStr"];
+					_veh forceSpeed 20;
+
+					// FORCE SPEED-LIMIT FOR SECOND TURN
+					if (_vehStr isEqualTo "Pickup 2") exitWith {
+						_veh forceSpeed 30;
+						[
+							{
+								params ["_veh"];
+								_veh inArea [[2575.39,6489.83,0], 5, 5, 0, false, -1]
+							},
+							{
+								params ["_veh"];
+								_veh forceSpeed 13;
+								[
+									{
+										params ["_veh"];
+										_veh forceSpeed -1;
+									},
+									[_veh],
+									5
+								] call CBA_fnc_waitAndExecute;
+							},
+							[_veh]
+						] call CBA_fnc_waitUntilAndExecute;
+					};
+					[
+						{
+							params ["_veh", "_vehStr"];
+							_veh inArea [[2693.63,6395.27,0], 5, 5, 0, false, -1]
+						},
+						{
+							params ["_veh", "_vehStr"];
+							_veh forceSpeed 16;
+
+							// REMOVE SPEED-LIMIT AFTER SECOND TURN
+							[
+								{
+									params ["_veh", "_vehStr"];
+									_veh inArea [[2695.66,6419.95,0], 5, 5, 0, false, -1]
+								},
+								{
+									params ["_veh", "_vehStr"];
+									_veh forceSpeed -1;
+								},
+								[_veh, _vehStr]
+							] call CBA_fnc_waitUntilAndExecute;
+						},
+						[_veh, _vehStr]
+					] call CBA_fnc_waitUntilAndExecute;
+				},
+				[_veh, _vehStr]
+			] call CBA_fnc_waitUntilAndExecute;
+		} forEach [[_pickup_1, "Pickup 1"], [_pickup_2, "Pickup 2"], [_vodnik, "Vodnik"]];
 
 		// HANDLE TRANSPORTS
 		{
 			_x params ["_veh", "_path", ["_grps", []], ["_vehStr", ""]];
 			
-			// if (_grps isEqualTo []) then { continue };
+			if (_grps isEqualTo []) then { continue };
 
-			// // HANDLE TRANSPORTS
-			// [
-			// 	{
-			// 		params ["_veh", "_grps", "_path", "_vehStr"];
-			// 		_veh inArea [_path select ((count _path) - 1), 10, 10, 0, false]
-			// 	},
-			// 	{
-			// 		params ["_veh", "_grps", "_path", "_vehStr"];
+			// HANDLE TRANSPORTS
+			[
+				{
+					params ["_veh", "_grps", "_path", "_vehStr"];
+					_veh inArea [_path select ((count _path) - 1), 10, 10, 0, false]
+				},
+				{
+					params ["_veh", "_grps", "_path", "_vehStr"];
 
-			// 		[
-			// 			{
-			// 				params ["_veh", "_grps", "_vehStr"];
-			// 				_grps params ["_crew", "_transport"];
+					[
+						{
+							params ["_veh", "_grps", "_vehStr"];
+							_grps params ["_crew", "_transport"];
 
-			// 				private _unloadPos = AGLToASL (_veh getRelPos [10, 180]);
-			// 				private _wp = _crew addWaypoint [_unloadPos, -1];
-			// 				_wp setWaypointType "TR UNLOAD";
-			// 				_wp setWaypointBehaviour "AWARE";
+							private _unloadPos = AGLToASL (_veh getRelPos [10, 180]);
+							private _wp = _crew addWaypoint [_unloadPos, -1];
+							_wp setWaypointType "TR UNLOAD";
+							_wp setWaypointBehaviour "AWARE";
 
-			// 				switch (_vehStr) do {
-			// 					case "Pickup 1": {
-			// 						private _attackWP = _transport addWaypoint [AGLToASL [2298.72,6582.42,0], -1];
-			// 						_attackWP setWaypointType "SAD";
-			// 						_attackWP setWaypointSpeed "FULL";
-			// 						systemChat "Unloading Pickup 1";
-			// 					};
+							switch (_vehStr) do {
+								case "Pickup 1": {
+									private _attackWP = _transport addWaypoint [AGLToASL [2512.93,6371.07,0], -1];
+									_attackWP setWaypointType "SAD";
+									_attackWP setWaypointSpeed "FULL";
+									systemChat "Unloading Pickup 1";
+								};
 
-			// 					case "Pickup 2": {
-			// 						private _attackWP = _transport addWaypoint [AGLToASL [2247.92,6591.48,0], -1];
-			// 						_attackWP setWaypointType "SAD";
-			// 						_attackWP setWaypointSpeed "FULL";
-			// 						systemChat "Unloading Pickup 2";
-			// 					};
-			// 					case "Vodnik": {
-			// 						[_transport, [2295.96,6663.58,0], 50] spawn lambs_wp_fnc_taskCQB;
-			// 						systemChat "Unloading Vodnik";
-			// 					};
-			// 				};
-			// 			},
-			// 			[_veh, _grps, _vehStr],
-			// 			2
-			// 		] call CBA_fnc_waitAndExecute;
-			// 	},
-			// 	[_veh, _grps, _path, _vehStr]
-			// ] call CBA_fnc_waitUntilAndExecute
+								case "Pickup 2": {
+									private _attackWP = _transport addWaypoint [AGLToASL [2587.88,6362.47,0], -1];
+									_attackWP setWaypointType "SAD";
+									_attackWP setWaypointSpeed "FULL";
+									systemChat "Unloading Pickup 2";
+								};
+								case "Vodnik": {
+									private _attackWP = _transport addWaypoint [AGLToASL [2543.95,6348.25,0], -1];
+									_attackWP setWaypointType "SAD";
+									_attackWP setWaypointSpeed "FULL";
+									systemChat "Unloading Vodnik";
+								};
+							};
+						},
+						[_veh, _grps, _vehStr],
+						2
+					] call CBA_fnc_waitAndExecute;
+				},
+				[_veh, _grps, _path, _vehStr]
+			] call CBA_fnc_waitUntilAndExecute
 		} forEach [
 					[_btr_1, _pathBtr_1],
 					[_pickup_1, _pathPickup_1, [_pickup_1_crewGroup, _pickup_1_transportGroup], "Pickup 1"],
@@ -218,7 +272,7 @@ switch (GRAD_WARLORD_POSITION) do {
 					// systemChat format["%1: %2", _i, _aim];
 				};
 			},
-			1,
+			0,
 			[[_btr_1, _pickup_1, _pickup_2, _vodnik], _stopPos]
 		] call CBA_fnc_addPerFrameHandler;
 	};
