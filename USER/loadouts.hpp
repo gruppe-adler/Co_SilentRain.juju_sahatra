@@ -19,7 +19,7 @@
 
 
 loadoutFactionBlu = "KskAlt";
-loadoutFactionOpf = "";
+loadoutFactionOpf = "warLordIraq";
 loadoutFactionInd = "";
 
 // Achtung: grad-factions enthält derzeit keine Loadouts, die für Zivilisten funktionieren
