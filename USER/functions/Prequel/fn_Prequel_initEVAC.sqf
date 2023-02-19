@@ -18,6 +18,10 @@ _vodnik addEventHandler ["Hit", {
 	_damage * 0.2
 }];
 
+{
+	_x setVariable ["lambs_danger_disableGroupAI", true];
+} forEach [_btr_1_crewGroup, _pickup_1_crewGroup, _pickup_2_crewGroup, _vodnik_crewGroup];
+
 sleep 2;
 
 private _approachPath = [];
