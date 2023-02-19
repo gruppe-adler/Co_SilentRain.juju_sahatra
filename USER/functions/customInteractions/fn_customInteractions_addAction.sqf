@@ -123,6 +123,50 @@ if (_name == "nadia") then {
 
 	_unit addAction
 	[
+		"<t color='#FFD966'>Dance (Animation)</t>",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller] remoteExecCall ["grad_SR_fnc_hooker_dance", 0];
+			
+		},
+		nil,		// arguments
+		2,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getvariable ['grad_SR_animationRunning', false])", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+
+	_unit addAction
+	[
+		"<t color='#FFD966'>End animation</t>",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller, ""] remoteExecCall ["switchmove", 0];
+			
+		},
+		nil,		// arguments
+		2,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getvariable ['grad_SR_animationRunning', false])", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+
+	_unit addAction
+	[
 		"Pee Before",	// title
 		{
 			params ["_target", "_caller", "_actionId", "_arguments"]; // script
@@ -193,6 +237,28 @@ if (_name == "nadia") then {
 			params ["_target", "_caller", "_actionId", "_arguments"]; // script
 			
 			[_caller, "dontknow"] call grad_SR_fnc_customInteractions_play;
+			
+		},
+		nil,		// arguments
+		1,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'dontknow', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+
+	_unit addAction
+	[
+		"Measure Cock",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller] call grad_SR_fnc_hooker_measure;
 			
 		},
 		nil,		// arguments

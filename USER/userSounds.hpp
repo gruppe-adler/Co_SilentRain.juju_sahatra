@@ -244,6 +244,15 @@ class nadia_quasimdead_2_calm
 	
 };
 
+class nadia_quasimdead_2_fear
+{
+	name	= "nadia_quasimdead_2_fear";
+	sound[]	= {"\USER\sounds\nadia_quasimdead_2_fear.ogg", db + 10, 1.0 };
+	titles[] = {};
+
+	
+};
+
 
 class nadia_quasimlove_1_seduce
 {

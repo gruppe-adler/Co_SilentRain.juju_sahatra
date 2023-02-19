@@ -5,5 +5,7 @@ class grad_hooker {
 
 	class hooker_spawn;
 	class hooker_animSquatStart;
+	class hooker_dance;
+	class hooker_measure;
 	class hooker_pee;
 };
