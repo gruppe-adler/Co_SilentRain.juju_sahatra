@@ -121,3 +121,24 @@
 		[] remoteExec ["grad_drop_fnc_timeJump", [0,-2] select isDedicated];
 	}
 ] call zen_custom_modules_fnc_register;
+
+[
+	"Silent Rain Start",
+	"Jump Master Greeting Start",
+	{ 
+		params ["_modulePosition"]; 
+		
+		[] remoteExec ["grad_SR_fnc_jumpMasterGreetingLoop", 2];
+	}
+] call zen_custom_modules_fnc_register;
+
+
+[
+	"Silent Rain Start",
+	"Jump Master Greeting Stop",
+	{ 
+		params ["_modulePosition"]; 
+		
+		missionNameSpace setVariable ["GRAD_drop_jmGreeting", false, true];
+	}
+] call zen_custom_modules_fnc_register;
