@@ -15,4 +15,5 @@ class GRAD_SilentRain {
 	#include "functions\hooker\CfgFunctions.hpp"
 	#include "functions\grasscutter\CfgFunctions.hpp"
 	#include "functions\custominteractions\CfgFunctions.hpp"
+	#include "functions\identity\CfgFunctions.hpp"
 };
