@@ -40,11 +40,226 @@ private _pathPickup_2 = [];
 private _stopPos = [];
 
 if (!isMultiplayer) then {
-	GRAD_WARLORD_POSITION = 2;
+	GRAD_WARLORD_POSITION = 1;
 };
 switch (GRAD_WARLORD_POSITION) do {
 	case 1: {
 		systemChat "Warlord Position 1";
+
+		private _pos12Path = [];
+		_finishMarkerNumber = 42;
+		for "_i" from _startMarkerNumber to _finishMarkerNumber do
+		{
+			private _marker = call(compile format ["GRAD_Pos12_%1", _i]);
+			// private _speed = _marker getVariable ["GRAD_driveSpeed", 17];
+			private _point = getPos _marker;
+			// _point pushBack _speed;
+			_pos12Path pushBack _point;
+		};
+
+		_path = _approachPath + _pos12Path;		
+
+		private _pos1_btr_path = [];
+		_finishMarkerNumber = 3;
+		for "_i" from _startMarkerNumber to _finishMarkerNumber do
+		{
+			private _marker = call(compile format ["GRAD_Pos1_btr_%1", _i]);
+			private _point = getPos _marker;
+			_pos1_btr_path pushBack _point;
+		};
+		_pathBtr_1 = _path + _pos1_btr_path;
+		_stopPos = _pathBtr_1 select ((count _pathBtr_1) - 1);
+
+		private _pos1_pickup1_path = [];
+		_finishMarkerNumber = 22;
+		for "_i" from _startMarkerNumber to _finishMarkerNumber do
+		{
+			private _marker = call(compile format ["GRAD_Pos1_pickup1_%1", _i]);
+			private _point = getPos _marker;
+			_pos1_pickup1_path pushBack _point;
+		};
+		_pathPickup_1 = _path + _pos1_pickup1_path;
+
+		private _pos1_vodnik_path = [];
+		_finishMarkerNumber = 7;
+		for "_i" from _startMarkerNumber to _finishMarkerNumber do
+		{
+			private _marker = call(compile format ["GRAD_Pos1_vodnik_%1", _i]);
+			private _point = getPos _marker;
+			_pos1_vodnik_path pushBack _point;
+		};
+		_pathVodnik = _path + _pos1_vodnik_path;
+
+		private _pos1_pickup2_path = [];
+		_finishMarkerNumber = 8;
+		for "_i" from _startMarkerNumber to _finishMarkerNumber do
+		{
+			private _marker = call(compile format ["GRAD_Pos1_pickup2_%1", _i]);
+			private _point = getPos _marker;
+			_pos1_pickup2_path pushBack _point;
+		};
+		_pathPickup_2 = _path + _pos1_pickup2_path;
+
+		// SPECIAL SPEED ADJUSTMENTS
+		{
+			_x params ["_veh", "_vehStr"];
+			// // REMOVE SPEED-LIMIT AFTER FIRST CORNER
+			// [
+			// 	{
+			// 		params ["_veh", "_vehStr"];
+			// 		_veh inArea [[2546.84,6325.67,0], 5, 5, 0, false, -1]
+			// 	},
+			// 	{
+			// 		params ["_veh", "_vehStr"];
+			// 		_veh forceSpeed 20;
+
+			// 		// FORCE SPEED-LIMIT FOR SECOND TURN
+			// 		if (_vehStr isEqualTo "Pickup 2") exitWith {
+			// 			_veh forceSpeed 30;
+			// 			[
+			// 				{
+			// 					params ["_veh"];
+			// 					_veh inArea [[2575.39,6489.83,0], 5, 5, 0, false, -1]
+			// 				},
+			// 				{
+			// 					params ["_veh"];
+			// 					_veh forceSpeed 13;
+			// 					[
+			// 						{
+			// 							params ["_veh"];
+			// 							_veh forceSpeed -1;
+			// 						},
+			// 						[_veh],
+			// 						5
+			// 					] call CBA_fnc_waitAndExecute;
+			// 				},
+			// 				[_veh]
+			// 			] call CBA_fnc_waitUntilAndExecute;
+			// 		};
+			// 		[
+			// 			{
+			// 				params ["_veh", "_vehStr"];
+			// 				_veh inArea [[2693.63,6395.27,0], 5, 5, 0, false, -1]
+			// 			},
+			// 			{
+			// 				params ["_veh", "_vehStr"];
+			// 				_veh forceSpeed 16;
+
+			// 				// REMOVE SPEED-LIMIT AFTER SECOND TURN
+			// 				[
+			// 					{
+			// 						params ["_veh", "_vehStr"];
+			// 						_veh inArea [[2695.66,6419.95,0], 5, 5, 0, false, -1]
+			// 					},
+			// 					{
+			// 						params ["_veh", "_vehStr"];
+			// 						_veh forceSpeed -1;
+			// 					},
+			// 					[_veh, _vehStr]
+			// 				] call CBA_fnc_waitUntilAndExecute;
+			// 			},
+			// 			[_veh, _vehStr]
+			// 		] call CBA_fnc_waitUntilAndExecute;
+			// 	},
+			// 	[_veh, _vehStr]
+			// ] call CBA_fnc_waitUntilAndExecute;
+		} forEach [[_pickup_1, "Pickup 1"], [_pickup_2, "Pickup 2"], [_vodnik, "Vodnik"]];
+
+		// HANDLE TRANSPORTS
+		{
+			_x params ["_veh", "_path", ["_grps", []], ["_vehStr", ""]];
+			
+			if (_grps isEqualTo []) then { continue };
+
+			// HANDLE TRANSPORTS
+			[
+				{
+					params ["_veh", "_grps", "_path", "_vehStr"];
+					_veh inArea [_path select ((count _path) - 1), 10, 10, 0, false]
+				},
+				{
+					params ["_veh", "_grps", "_path", "_vehStr"];
+
+					[
+						{
+							params ["_veh", "_grps", "_vehStr"];
+							_grps params ["_crew", "_transport"];
+
+							private _unloadPos = AGLToASL (_veh getRelPos [10, 180]);
+							private _wp = _crew addWaypoint [_unloadPos, -1];
+							_wp setWaypointType "TR UNLOAD";
+							_wp setWaypointBehaviour "AWARE";
+
+							switch (_vehStr) do {
+								case "Pickup 1": {
+									private _attackWP = _transport addWaypoint [AGLToASL [2530.21,6153.61,0], -1];
+									_attackWP setWaypointType "SAD";
+									_attackWP setWaypointSpeed "FULL";
+									systemChat "Unloading Pickup 1";
+								};
+
+								case "Pickup 2": {
+									private _attackWP = _transport addWaypoint [AGLToASL [2565.36,6215.1,0], -1];
+									_attackWP setWaypointType "SAD";
+									_attackWP setWaypointSpeed "FULL";
+									systemChat "Unloading Pickup 2";
+								};
+								case "Vodnik": {
+									private _attackWP = _transport addWaypoint [AGLToASL [2538.61,6158.46,0], -1];
+									_attackWP setWaypointType "SAD";
+									_attackWP setWaypointSpeed "FULL";
+									systemChat "Unloading Vodnik";
+								};
+							};
+						},
+						[_veh, _grps, _vehStr],
+						2
+					] call CBA_fnc_waitAndExecute;
+				},
+				[_veh, _grps, _path, _vehStr]
+			] call CBA_fnc_waitUntilAndExecute
+		} forEach [
+					[_btr_1, _pathBtr_1],
+					[_pickup_1, _pathPickup_1, [_pickup_1_crewGroup, _pickup_1_transportGroup], "Pickup 1"],
+					[_pickup_2, _pathPickup_2, [_pickup_2_crewGroup, _pickup_2_transportGroup], "Pickup 2"],
+					[_vodnik, _pathVodnik, [_vodnik_crewGroup, _vodnik_transportGroup], "Vodnik"]
+				];
+
+		_handle = 
+		[
+			{
+				params ["_args", "_handle"];
+				_args params ["_vehicles", "_stopPos"];
+
+				private _lead = _vehicles select 0;
+				if (_lead inArea [_stopPos, 20, 20, 0, false]) exitWith {
+					for "_i" from 1 to ((count _vehicles) - 1) do {
+						private _veh = _vehicles select _i;
+						_veh forceSpeed 15;				
+					};
+					systemChat "stopping convoy spacing";
+					[_handle] call CBA_fnc_removePerFrameHandler;
+				};
+
+				// systemChat format["0: %1",(speed _lead) / 3.6];
+				for "_i" from 1 to ((count _vehicles) - 1) do {
+					private _veh = _vehicles select _i;
+					private _inFront = _vehicles select (_i - 1);
+					private _speedFront = (speed _inFront) / 3.6;
+					private _dist = _veh distance _inFront;
+
+					private _aim = (_dist / DISTANCE_TO_KEEP) * _speedFront;
+					if (_dist > DISTANCE_TO_KEEP) then {
+						_aim = (_aim * 0.6) min (_speedFront * 1.3);
+					};
+					_veh forceSpeed _aim;
+
+					// systemChat format["%1: %2", _i, _aim];
+				};
+			},
+			0,
+			[[_btr_1, _pickup_1, _pickup_2, _vodnik], _stopPos]
+		] call CBA_fnc_addPerFrameHandler;		
 	};
 
 	case 2:{
@@ -272,7 +487,7 @@ switch (GRAD_WARLORD_POSITION) do {
 					// systemChat format["%1: %2", _i, _aim];
 				};
 			},
-			0,
+			1,
 			[[_btr_1, _pickup_1, _pickup_2, _vodnik], _stopPos]
 		] call CBA_fnc_addPerFrameHandler;
 	};
