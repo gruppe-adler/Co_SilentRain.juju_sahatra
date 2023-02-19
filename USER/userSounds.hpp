@@ -361,9 +361,7 @@ class nadia_yes_4_fear
 {
 	name	= "nadia_yes_4_fear";
 	sound[]	= {"\USER\sounds\nadia_yes_4_fear.ogg", db + 10, 1.0 };
-	titles[] = {};
-
-	
+	titles[] = {};	
 };
 
 class nadia_yes_1_seduce
@@ -371,10 +369,99 @@ class nadia_yes_1_seduce
 	name	= "nadia_yes_1_seduce";
 	sound[]	= {"\USER\sounds\nadia_yes_1_seduce.ogg", db + 10, 1.0 };
 	titles[] = {};
-
-	
 };
 
+
+class nadia_phoning_01
+{
+	name	= "nadia_phoning_01";
+	sound[]	= {"\USER\sounds\nadia_phoning_01.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_02
+{
+	name	= "nadia_phoning_02";
+	sound[]	= {"\USER\sounds\nadia_phoning_02.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_03
+{
+	name	= "nadia_phoning_03";
+	sound[]	= {"\USER\sounds\nadia_phoning_03.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_04
+{
+	name	= "nadia_phoning_04";
+	sound[]	= {"\USER\sounds\nadia_phoning_04.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_05
+{
+	name	= "nadia_phoning_05";
+	sound[]	= {"\USER\sounds\nadia_phoning_05.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_06
+{
+	name	= "nadia_phoning_06";
+	sound[]	= {"\USER\sounds\nadia_phoning_06.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_07
+{
+	name	= "nadia_phoning_07";
+	sound[]	= {"\USER\sounds\nadia_phoning_07.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_08
+{
+	name	= "nadia_phoning_08";
+	sound[]	= {"\USER\sounds\nadia_phoning_08.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_09
+{
+	name	= "nadia_phoning_09";
+	sound[]	= {"\USER\sounds\nadia_phoning_09.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_10
+{
+	name	= "nadia_phoning_10";
+	sound[]	= {"\USER\sounds\nadia_phoning_10.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_11
+{
+	name	= "nadia_phoning_11";
+	sound[]	= {"\USER\sounds\nadia_phoning_11.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_12
+{
+	name	= "nadia_phoning_12";
+	sound[]	= {"\USER\sounds\nadia_phoning_12.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+
+class nadia_phoning_13
+{
+	name	= "nadia_phoning_13";
+	sound[]	= {"\USER\sounds\nadia_phoning_13.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
 
 
 // KHALIL

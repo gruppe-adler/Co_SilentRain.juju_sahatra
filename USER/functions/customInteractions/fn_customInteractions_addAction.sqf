@@ -262,7 +262,7 @@ if (_name == "nadia") then {
 			
 		},
 		nil,		// arguments
-		1,		// priority
+		.5,		// priority
 		true,		// showWindow
 		true,		// hideOnUse
 		"",			// shortcut
@@ -276,6 +276,70 @@ if (_name == "nadia") then {
 
 	_unit addAction
 	[
+		"Phone Friend Start",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller] call grad_SR_fnc_hooker_call;
+			
+		},
+		nil,		// arguments
+		2.5,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_originalTarget getVariable ['grad_SR_hookerPhoning', false])", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+		_unit addAction
+	[
+		"Phone Friend Abort",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			_caller setVariable ['grad_SR_hookerPhoning', false, true];
+			
+		},
+		nil,		// arguments
+		2.5,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (_originalTarget getVariable ['grad_SR_hookerPhoning', false])", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+
+	_unit addAction
+	[
+		"CHANGE OUTFIT",	// title
+		{
+			params ["_target", "_caller", "_actionId", "_arguments"]; // script
+			
+			[_caller] call grad_SR_fnc_hooker_changeOutfit;
+			
+		},
+		nil,		// arguments
+		3,		// priority
+		true,		// showWindow
+		true,		// hideOnUse
+		"",			// shortcut
+		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull])", 	// condition
+		50,			// radius
+		false,		// unconscious
+		"",			// selection
+		""			// memoryPoint
+	];
+
+	_unit addAction
+	[
 		"no",	// title
 		{
 			params ["_target", "_caller", "_actionId", "_arguments"]; // script
@@ -284,7 +348,7 @@ if (_name == "nadia") then {
 			
 		},
 		nil,		// arguments
-		1,		// priority
+		1.1,		// priority
 		true,		// showWindow
 		true,		// hideOnUse
 		"",			// shortcut
@@ -305,7 +369,7 @@ if (_name == "nadia") then {
 			
 		},
 		nil,		// arguments
-		1,		// priority
+		.8,		// priority
 		true,		// showWindow
 		true,		// hideOnUse
 		"",			// shortcut
@@ -326,7 +390,7 @@ if (_name == "nadia") then {
 			
 		},
 		nil,		// arguments
-		1,		// priority
+		.4,		// priority
 		true,		// showWindow
 		true,		// hideOnUse
 		"",			// shortcut
@@ -368,7 +432,7 @@ if (_name == "nadia") then {
 			
 		},
 		nil,		// arguments
-		1,		// priority
+		1.2,		// priority
 		true,		// showWindow
 		true,		// hideOnUse
 		"",			// shortcut

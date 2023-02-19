@@ -8,4 +8,6 @@ class grad_hooker {
 	class hooker_dance;
 	class hooker_measure;
 	class hooker_pee;
+	class hooker_call;
+	class hooker_changeOutfit;
 };
