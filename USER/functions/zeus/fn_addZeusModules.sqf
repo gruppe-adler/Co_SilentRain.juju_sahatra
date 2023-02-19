@@ -128,7 +128,7 @@
 	{ 
 		params ["_modulePosition"]; 
 		
-		[] remoteExec ["grad_SR_fnc_jumpMasterGreetingLoop", 2];
+		[] remoteExec ["grad_drop_fnc_jumpMasterGreetingLoop", 2];
 	}
 ] call zen_custom_modules_fnc_register;
 

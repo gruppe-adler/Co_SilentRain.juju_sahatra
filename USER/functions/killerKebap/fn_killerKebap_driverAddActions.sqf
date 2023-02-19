@@ -20,7 +20,7 @@ _killerKebapDriver addEventHandler ["GetInMan", {
 
 
 
-_kebapbox addAction
+_killerKebapDriver addAction
 [
 	"Pick up Kebap",	// title
 	{
@@ -40,7 +40,7 @@ _kebapbox addAction
 	""			// memoryPoint
 ];
 
-_kebapbox addAction
+_killerKebapDriver addAction
 [
 	"Drop Kebap",	// title
 	{
