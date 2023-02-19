@@ -259,7 +259,7 @@ class CfgDebriefing
 		description = "You successfully eliminated Qasim.";
 		pictureBackground = "";
 		picture = "data\gruppe-adler.paa";
-		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+		pictureColor[] = { 1.0, 1.0, 1.0, 1 };
 	};
 
     class End_Failed
@@ -269,7 +269,7 @@ class CfgDebriefing
 		description = "Qasim was able to flee.";
 		pictureBackground = "";
 		picture = "data\gruppe-adler.paa";
-		pictureColor[] = { 0.0, 0.3, 0.6, 1 };
+		pictureColor[] = { 1.0, 1.0, 1.0, 1 };
 	};
 };
 
