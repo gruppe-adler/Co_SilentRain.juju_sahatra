@@ -142,3 +142,13 @@
 		missionNameSpace setVariable ["GRAD_drop_jmGreeting", false, true];
 	}
 ] call zen_custom_modules_fnc_register;
+
+[
+	"Silent Rain Start",
+	"Player Exfil",
+	{ 
+		params ["_modulePosition"]; 
+		
+		[] call grad_SR_fnc_Prequel_initPlayerExfil;
+	}
+] call zen_custom_modules_fnc_register;
