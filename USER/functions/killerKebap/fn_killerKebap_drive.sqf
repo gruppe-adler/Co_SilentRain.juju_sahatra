@@ -41,11 +41,34 @@ for "_i" from _startMarkerNumber to _finishMarkerNumber do
 private _path = [];
 
 if (!isMultiplayer) then {
-	GRAD_WARLORD_POSITION = 2;
+	GRAD_WARLORD_POSITION = 1;
 };
 switch (GRAD_WARLORD_POSITION) do {
 	case 1: {
 		systemChat "Warlord Position 1";
+
+		private _pos12Path = [];
+		_finishMarkerNumber = 42;
+		for "_i" from _startMarkerNumber to _finishMarkerNumber do
+		{
+			private _marker = call(compile format ["GRAD_Pos12_%1", _i]);
+			// private _speed = _marker getVariable ["GRAD_driveSpeed", 17];
+			private _point = getPos _marker;
+			// _point pushBack _speed;
+			_pos12Path pushBack _point;
+		};		
+
+		_path = _approachPath + _pos12Path;
+
+		private _pos1_pickup2_path = [];
+		_finishMarkerNumber = 7;
+		for "_i" from _startMarkerNumber to _finishMarkerNumber do
+		{
+			private _marker = call(compile format ["GRAD_Pos1_pickup2_%1", _i]);
+			private _point = getPos _marker;
+			_pos1_pickup2_path pushBack _point;
+		};
+		_path = _path + _pos1_pickup2_path;		
 	};
 
 	case 2:{
