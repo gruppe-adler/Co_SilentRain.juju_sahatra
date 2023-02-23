@@ -326,8 +326,24 @@ class nadia_yes_1_calm
 	name	= "nadia_yes_1_calm";
 	sound[]	= {"\USER\sounds\nadia_yes_1_calm.ogg", db + 10, 1.0 };
 	titles[] = {};
-
-	
+};
+class nadia_yes_2_calm
+{
+	name	= "nadia_yes_2_calm";
+	sound[]	= {"\USER\sounds\nadia_yes_1_calm.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+class nadia_yes_3_calm
+{
+	name	= "nadia_yes_3_calm";
+	sound[]	= {"\USER\sounds\nadia_yes_1_calm.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+class nadia_yes_4_calm
+{
+	name	= "nadia_yes_4_calm";
+	sound[]	= {"\USER\sounds\nadia_yes_1_calm.ogg", db + 10, 1.0 };
+	titles[] = {};
 };
 
 class nadia_yes_1_fear
@@ -335,28 +351,19 @@ class nadia_yes_1_fear
 	name	= "nadia_yes_1_fear";
 	sound[]	= {"\USER\sounds\nadia_yes_1_fear.ogg", db + 10, 1.0 };
 	titles[] = {};
-
-	
 };
-
 class nadia_yes_2_fear
 {
 	name	= "nadia_yes_2_fear";
 	sound[]	= {"\USER\sounds\nadia_yes_2_fear.ogg", db + 10, 1.0 };
 	titles[] = {};
-
-	
 };
-
 class nadia_yes_3_fear
 {
 	name	= "nadia_yes_3_fear";
 	sound[]	= {"\USER\sounds\nadia_yes_3_fear.ogg", db + 10, 1.0 };
 	titles[] = {};
-
-	
 };
-
 class nadia_yes_4_fear
 {
 	name	= "nadia_yes_4_fear";
@@ -367,6 +374,24 @@ class nadia_yes_4_fear
 class nadia_yes_1_seduce
 {
 	name	= "nadia_yes_1_seduce";
+	sound[]	= {"\USER\sounds\nadia_yes_1_seduce.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+class nadia_yes_2_seduce
+{
+	name	= "nadia_yes_2_seduce";
+	sound[]	= {"\USER\sounds\nadia_yes_1_seduce.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+class nadia_yes_3_seduce
+{
+	name	= "nadia_yes_3_seduce";
+	sound[]	= {"\USER\sounds\nadia_yes_1_seduce.ogg", db + 10, 1.0 };
+	titles[] = {};
+};
+class nadia_yes_4_seduce
+{
+	name	= "nadia_yes_4_seduce";
 	sound[]	= {"\USER\sounds\nadia_yes_1_seduce.ogg", db + 10, 1.0 };
 	titles[] = {};
 };
