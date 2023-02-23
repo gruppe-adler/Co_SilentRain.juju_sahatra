@@ -98,6 +98,27 @@
 ] call zen_custom_modules_fnc_register;
 
 
+[
+	"Silent Rain Spawns",
+	"Spawn Female Civ",
+	{ 
+		params ["_modulePosition"]; 
+		private _position = ASLtoAGL _modulePosition;
+		
+		[_position, false] remoteExec ["grad_SR_fnc_identity_spawnCiv", 2];
+	}
+] call zen_custom_modules_fnc_register;
+
+[
+	"Silent Rain Spawns",
+	"Spawn Male Civ",
+	{ 
+		params ["_modulePosition"]; 
+		private _position = ASLtoAGL _modulePosition;
+		
+		[_position, true] remoteExec ["grad_SR_fnc_identity_spawnCiv", 2];
+	}
+] call zen_custom_modules_fnc_register;
 
 /// MISSION START 
 
