@@ -152,3 +152,21 @@
 		[] call grad_SR_fnc_Prequel_initPlayerExfil;
 	}
 ] call zen_custom_modules_fnc_register;
+
+
+
+// STOP
+
+[
+	"Silent Rain Stop",
+	"Stop Convoy Formation",
+	{ 
+		params ["_modulePosition"]; 
+		
+		if (missionNamespace getVariable ["GRAD_CancelConvoy", false]) exitWith {
+			hint "Convoy has already been stopped!";
+		};
+
+		missionNameSpace setVariable ["GRAD_CancelConvoy", true, true];
+	}
+] call zen_custom_modules_fnc_register;

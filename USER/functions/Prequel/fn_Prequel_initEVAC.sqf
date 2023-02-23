@@ -13,14 +13,19 @@ private _vodnikTransport = ["O_Soldier_SL_F", "O_Soldier_F", "O_Soldier_LAT_F", 
 (["UK3CB_ARD_O_GAZ_Vodnik", GRAD_spawn_vodnik, "O_Soldier_F", _vodnikTransport] call grad_SR_fnc_Prequel_spawnVehicle) params ["_vodnik", "_vodnik_crewGroup", "_vodnik_transportGroup"];
 // (["UK3CB_KRG_O_BTR60", GRAD_spawn_btr_2, "O_crew_F"] call grad_SR_fnc_Prequel_spawnVehicle) params ["_btr_2", "_btr_2_crewGroup"];
 
-_vodnik addEventHandler ["Hit", {
-	params ["_unit", "_source", "_damage", "_instigator"];
+// _vodnik addEventHandler ["Hit", {
+// 	params ["_unit", "_source", "_damage", "_instigator"];
+// 	_damage * 0.2
+// }];
+
+_vodnik addEventHandler ["HandleDamage", {
+	params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
 	_damage * 0.2
 }];
 
-{
-	_x setVariable ["lambs_danger_disableGroupAI", true];
-} forEach [_btr_1_crewGroup, _pickup_1_crewGroup, _pickup_2_crewGroup, _vodnik_crewGroup];
+// {
+// 	_x setVariable ["lambs_danger_disableGroupAI", true];
+// } forEach [_btr_1_crewGroup, _pickup_1_crewGroup, _pickup_2_crewGroup, _vodnik_crewGroup];
 
 sleep 2;
 
@@ -42,6 +47,7 @@ private _pathPickup_1 = [];
 private _pathVodnik = [];
 private _pathPickup_2 = [];
 private _stopPos = [];
+private _handle = 0;
 
 if (!isMultiplayer) then {
 	GRAD_WARLORD_POSITION = 1;
@@ -104,71 +110,6 @@ switch (GRAD_WARLORD_POSITION) do {
 		};
 		_pathPickup_2 = _path + _pos1_pickup2_path;
 
-		// SPECIAL SPEED ADJUSTMENTS
-		{
-			_x params ["_veh", "_vehStr"];
-			// // REMOVE SPEED-LIMIT AFTER FIRST CORNER
-			// [
-			// 	{
-			// 		params ["_veh", "_vehStr"];
-			// 		_veh inArea [[2546.84,6325.67,0], 5, 5, 0, false, -1]
-			// 	},
-			// 	{
-			// 		params ["_veh", "_vehStr"];
-			// 		_veh forceSpeed 20;
-
-			// 		// FORCE SPEED-LIMIT FOR SECOND TURN
-			// 		if (_vehStr isEqualTo "Pickup 2") exitWith {
-			// 			_veh forceSpeed 30;
-			// 			[
-			// 				{
-			// 					params ["_veh"];
-			// 					_veh inArea [[2575.39,6489.83,0], 5, 5, 0, false, -1]
-			// 				},
-			// 				{
-			// 					params ["_veh"];
-			// 					_veh forceSpeed 13;
-			// 					[
-			// 						{
-			// 							params ["_veh"];
-			// 							_veh forceSpeed -1;
-			// 						},
-			// 						[_veh],
-			// 						5
-			// 					] call CBA_fnc_waitAndExecute;
-			// 				},
-			// 				[_veh]
-			// 			] call CBA_fnc_waitUntilAndExecute;
-			// 		};
-			// 		[
-			// 			{
-			// 				params ["_veh", "_vehStr"];
-			// 				_veh inArea [[2693.63,6395.27,0], 5, 5, 0, false, -1]
-			// 			},
-			// 			{
-			// 				params ["_veh", "_vehStr"];
-			// 				_veh forceSpeed 16;
-
-			// 				// REMOVE SPEED-LIMIT AFTER SECOND TURN
-			// 				[
-			// 					{
-			// 						params ["_veh", "_vehStr"];
-			// 						_veh inArea [[2695.66,6419.95,0], 5, 5, 0, false, -1]
-			// 					},
-			// 					{
-			// 						params ["_veh", "_vehStr"];
-			// 						_veh forceSpeed -1;
-			// 					},
-			// 					[_veh, _vehStr]
-			// 				] call CBA_fnc_waitUntilAndExecute;
-			// 			},
-			// 			[_veh, _vehStr]
-			// 		] call CBA_fnc_waitUntilAndExecute;
-			// 	},
-			// 	[_veh, _vehStr]
-			// ] call CBA_fnc_waitUntilAndExecute;
-		} forEach [[_pickup_1, "Pickup 1"], [_pickup_2, "Pickup 2"], [_vodnik, "Vodnik"]];
-
 		// HANDLE TRANSPORTS
 		{
 			_x params ["_veh", "_path", ["_grps", []], ["_vehStr", ""]];
@@ -220,7 +161,8 @@ switch (GRAD_WARLORD_POSITION) do {
 						2
 					] call CBA_fnc_waitAndExecute;
 				},
-				[_veh, _grps, _path, _vehStr]
+				[_veh, _grps, _path, _vehStr],
+				360
 			] call CBA_fnc_waitUntilAndExecute
 		} forEach [
 					[_btr_1, _pathBtr_1],
@@ -263,7 +205,7 @@ switch (GRAD_WARLORD_POSITION) do {
 			},
 			0,
 			[[_btr_1, _pickup_1, _pickup_2, _vodnik], _stopPos]
-		] call CBA_fnc_addPerFrameHandler;		
+		] call CBA_fnc_addPerFrameHandler;
 	};
 
 	case 2:{
@@ -367,7 +309,8 @@ switch (GRAD_WARLORD_POSITION) do {
 									5
 								] call CBA_fnc_waitAndExecute;
 							},
-							[_veh]
+							[_veh],
+							30
 						] call CBA_fnc_waitUntilAndExecute;
 					};
 					[
@@ -389,13 +332,16 @@ switch (GRAD_WARLORD_POSITION) do {
 									params ["_veh", "_vehStr"];
 									_veh forceSpeed -1;
 								},
-								[_veh, _vehStr]
+								[_veh, _vehStr],
+								30
 							] call CBA_fnc_waitUntilAndExecute;
 						},
-						[_veh, _vehStr]
+						[_veh, _vehStr],
+						30
 					] call CBA_fnc_waitUntilAndExecute;
 				},
-				[_veh, _vehStr]
+				[_veh, _vehStr],
+				360
 			] call CBA_fnc_waitUntilAndExecute;
 		} forEach [[_pickup_1, "Pickup 1"], [_pickup_2, "Pickup 2"], [_vodnik, "Vodnik"]];
 
@@ -450,7 +396,8 @@ switch (GRAD_WARLORD_POSITION) do {
 						2
 					] call CBA_fnc_waitAndExecute;
 				},
-				[_veh, _grps, _path, _vehStr]
+				[_veh, _grps, _path, _vehStr],
+				360
 			] call CBA_fnc_waitUntilAndExecute
 		} forEach [
 					[_btr_1, _pathBtr_1],
@@ -571,7 +518,8 @@ switch (GRAD_WARLORD_POSITION) do {
 					5
 				] call CBA_fnc_waitAndExecute;
 			},
-			[_pickup_1]
+			[_pickup_1],
+			360
 		] call CBA_fnc_waitUntilAndExecute;
 
 		// HANDLE TRANSPORTS
@@ -622,7 +570,8 @@ switch (GRAD_WARLORD_POSITION) do {
 						2
 					] call CBA_fnc_waitAndExecute;
 				},
-				[_veh, _grps, _path, _vehStr]
+				[_veh, _grps, _path, _vehStr],
+				360
 			] call CBA_fnc_waitUntilAndExecute
 		} forEach [
 					[_btr_1, _pathBtr_1],
@@ -675,3 +624,38 @@ switch (GRAD_WARLORD_POSITION) do {
 	_x params ["_veh", "_path"];
 	_veh setDriveOnPath _path;
 } forEach [[_btr_1, _pathBtr_1], [_pickup_1, _pathPickup_1], [_pickup_2, _pathPickup_2], [_vodnik, _pathVodnik]];
+
+// STOP CONVOY FORMATION
+[
+	{
+		params ["_handle"];
+		missionNamespace getVariable ["GRAD_CancelConvoy", false]
+	},
+	{
+		params ["_handle", "_vehicles", "_paths", "_groups"];
+
+		[_handle] call CBA_fnc_removePerFrameHandler;
+		{
+			_x forceSpeed -1;
+			private _path = _paths select _forEachIndex;
+			private _pos = _path select (count _path - 1);
+			private _grp = _groups select _forEachIndex;
+
+			
+			// doStop _x;
+			_grp move _pos;
+
+			// private _wp = _grp addWaypoint [AGLToASL _pos, -1];
+			// _wp setWaypointSpeed "FULL";
+			// _wp setWaypointBehaviour "AWARE";
+		} forEach _vehicles;
+	},
+	[
+		_handle,
+		[_btr_1, _pickup_1, _pickup_2, _vodnik],
+		[_pathBtr_1, _pathPickup_1, _pathPickup_2, _pathVodnik],
+		[_btr_1_crewGroup, _pickup_1_crewGroup, _pickup_2_crewGroup, _vodnik_crewGroup]
+	],
+	// after 6 minutes, the convoy no longer exists
+	360
+] call CBA_fnc_waitUntilAndExecute;

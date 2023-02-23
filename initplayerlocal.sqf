@@ -10,6 +10,8 @@ if (!isMultiplayer) exitWith {};
 	_x params ["_objects", "_markers"];
 
 	{
+		if (isNull _x) then { continue };
+		
 		_x enableSimulation false;
         _x hideObject true;
 	} forEach _objects;

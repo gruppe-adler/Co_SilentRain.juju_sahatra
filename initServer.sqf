@@ -16,4 +16,24 @@ GRAD_LAYERS_TO_DELETE = [];
 publicVariable "GRAD_LAYERS_TO_DELETE";
 
 
+if (!isMultiplayer) exitWith {};
+{
+	_x params ["_objects", "_markers"];
+
+	{
+		if (_x isKindOf "Man") then {
+			deleteVehicle _x;
+			continue
+		};
+		
+		_x enableSimulation false;
+        _x hideObject true;
+	} forEach _objects;
+
+	{
+        deleteMarkerLocal _x;
+	} forEach _markers;
+} forEach GRAD_LAYERS_TO_DELETE;
+
+
 missionNameSpace setVariable ["grad_SR_playerDeaths", str 0, true];
