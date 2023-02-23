@@ -158,7 +158,6 @@ class CfgFunctions
 
     #include "node_modules\grad-loadout\cfgFunctions.hpp"
     #include "node_modules\grad-customGear\cfgFunctions.hpp"
-	#include "node_modules\grad-civs\cfgFunctions.hpp"
 	#include "node_modules\grad-fortifications\cfgFunctions.hpp"
     #include "node_modules\grad-drop\cfgFunctions.hpp"
 
@@ -223,15 +222,6 @@ class Loadouts {
         #include "USER\userLoadouts.hpp"
     };
 };
-
-//GRAD CIVS ====================================================================
-class CfgGradCivs {
-	#include "USER\civSettings.hpp"
-
-    autoInit = 1;
-    debugMode = 0;
-};
-
 
 //OTHER NPM MODULES ============================================================
 class CfgGradCustomGear {
