@@ -6,6 +6,7 @@ _killerKebapDriver addEventHandler ["GetOutMan", {
 	if (local _unit) then {
 		private _kebapbox = [_unit] call grad_SR_fnc_killerKebap_spawnKebap;
 		[_kebapbox, _unit] call grad_SR_fnc_killerKebap_carryKebap;
+		_vehicle setVariable ["songPlaying", false, true];
 	};
 }];
 
@@ -15,6 +16,9 @@ _killerKebapDriver addEventHandler ["GetInMan", {
 	if (local _unit) then {
 		private _kebapbox = _unit getVariable ["grad_SR_kebapbox", objNull];
 		[_unit, _kebapbox] call grad_SR_fnc_killerKebap_deleteKebap;
+
+		[_vehicle] remoteExec ["grad_SR_fnc_killerkebap_playSong", [0, -2] select isDedicated, _vehicle];
+		_vehicle setVariable ["songPlaying", true, true];
 	};
 }];
 
