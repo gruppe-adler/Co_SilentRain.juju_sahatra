@@ -27,6 +27,6 @@ loadoutFactionCiv = "";
 
 
 //#define NIGHTVISION
-//#define GUNLIGHTS
+#define GUNLIGHTS
 //#define LASERS
-//#define SUPPRESSORS
+#define SUPPRESSORS
