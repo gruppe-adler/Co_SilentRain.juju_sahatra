@@ -33,3 +33,5 @@ private _unit = (createGroup civilian) createUnit [
 if (_male) then {
 	_unit addHeadgear (selectRandom ["UK3CB_ADE_I_H_Turban_01_1", "UK3CB_ADE_O_H_Turban_01_2"]);
 };
+
+_unit disableAI "FSM";
