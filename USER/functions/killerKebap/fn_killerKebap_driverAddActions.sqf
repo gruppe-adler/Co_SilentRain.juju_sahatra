@@ -26,14 +26,14 @@ _killerKebapDriver addAction
 	{
 		params ["_target", "_caller", "_actionId", "_arguments"]; // script
 
-		[_target, _caller] call grad_SR_fnc_killerKebap_carryKebap;
+		[cursorObject, _caller] call grad_SR_fnc_killerKebap_carryKebap;
 	},
 	nil,		// arguments
 	2,		// priority
 	true,		// showWindow
 	true,		// hideOnUse
 	"",			// shortcut
-	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && isNull (_this getvariable ['grad_SR_kebapbox', objNull])", 	// condition
+	"typeOf cursorObject == 'EauDeCombat_01_box_F' && player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && isNull (_this getvariable ['grad_SR_kebapbox', objNull])", 	// condition
 	2,			// radius
 	false,		// unconscious
 	"",			// selection
