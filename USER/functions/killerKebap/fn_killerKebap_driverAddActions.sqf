@@ -147,7 +147,7 @@ _killerKebapDriver addAction
 	true,		// showWindow
 	true,		// hideOnUse
 	"",			// shortcut
-	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getVariable ['grad_SR_gestureRunning', false]) && (_this getVariable ['GRAD_SR_emotion', 'none']) == 'pleading'", 	// condition
+	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getVariable ['grad_SR_gestureRunning', false]) && (_this getVariable ['GRAD_SR_emotion', 'pleading']) == 'pleading'", 	// condition
 	50,			// radius
 	false,		// unconscious
 	"",			// selection
