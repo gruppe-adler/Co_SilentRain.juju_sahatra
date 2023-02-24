@@ -30,7 +30,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (_this getVariable ['GRAD_SR_emotion', 'calm']) == 'calm'", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -51,7 +51,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (_this getVariable ['GRAD_SR_emotion', 'none']) == 'fear'", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -73,7 +73,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (_this getVariable ['GRAD_SR_emotion', 'none'] == 'seduce')", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -94,7 +94,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'peeAfter', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -115,7 +115,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getvariable ['grad_SR_animationRunning', false])", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -136,7 +136,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getvariable ['grad_SR_animationRunning', false])", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -158,7 +158,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getvariable ['grad_SR_animationRunning', false])", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -180,7 +180,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'peeBefore', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -202,7 +202,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'confused', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -223,7 +223,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'greet', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -245,7 +245,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'dontknow', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -267,7 +267,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'dontknow', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -289,7 +289,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_originalTarget getVariable ['grad_SR_hookerPhoning', false])", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -310,7 +310,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (_originalTarget getVariable ['grad_SR_hookerPhoning', false])", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -332,7 +332,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull])", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -353,7 +353,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'no', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -374,7 +374,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'quasimdead', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -395,7 +395,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'quasimlove', (_originalTarget getVariable ['grad_SR_emotion', 'seduce'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -416,7 +416,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'whatshappening', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint
@@ -437,7 +437,7 @@ if (_name == "nadia") then {
 		true,		// hideOnUse
 		"",			// shortcut
 		"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['nadia', 'yes', (_originalTarget getVariable ['grad_SR_emotion', 'fear'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-		50,			// radius
+		0,			// radius
 		false,		// unconscious
 		"",			// selection
 		""			// memoryPoint

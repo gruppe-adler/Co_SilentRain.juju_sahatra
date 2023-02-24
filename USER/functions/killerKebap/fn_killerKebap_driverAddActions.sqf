@@ -58,7 +58,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !isNull (_this getvariable ['grad_SR_kebapbox', objNull])", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -80,7 +80,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !isNull (_this getvariable ['grad_SR_kebapbox', objNull]) && gestureState _this != 'GestureAgonyCargo'", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -101,7 +101,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !isNull (_this getvariable ['grad_SR_kebapbox', objNull]) && gestureState _this == 'GestureAgonyCargo'", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -127,7 +127,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getVariable ['grad_SR_gestureRunning', false]) && (_this getVariable ['GRAD_SR_emotion', 'angry']) == 'angry'", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -148,7 +148,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && !(_this getVariable ['grad_SR_gestureRunning', false]) && (_this getVariable ['GRAD_SR_emotion', 'pleading']) == 'pleading'", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -172,7 +172,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'greet', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -194,7 +194,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'dontknow', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -216,7 +216,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'no', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -237,7 +237,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'yes', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -259,7 +259,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'curse', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -280,7 +280,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'detected', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -302,7 +302,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'letmego', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -323,7 +323,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'pleasedonthurt', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
@@ -345,7 +345,7 @@ _killerKebapDriver addAction
 	true,		// hideOnUse
 	"",			// shortcut
 	"player == (_this getVariable ['BIS_fnc_moduleRemoteControl_owner', objNull]) && (['khalil', 'russian', (_originalTarget getVariable ['grad_SR_emotion', 'pleading'])] call grad_SR_fnc_customInteractions_getSoundCount) > 0", 	// condition
-	50,			// radius
+	0,			// radius
 	false,		// unconscious
 	"",			// selection
 	""			// memoryPoint
