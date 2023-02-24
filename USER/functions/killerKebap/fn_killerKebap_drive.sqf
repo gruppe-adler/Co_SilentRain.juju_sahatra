@@ -11,7 +11,8 @@ _killerKebapDriver setBehaviour "CARELESS";
 sleep 1;
 
 _killerKebapDriver addUniform "UK3CB_ADC_C_Shorts_U_04";
-
+[_killerKebapDriver, "khalil"] remoteExec ["setIdentity", 0, _killerKebapDriver];
+[_killerKebapDriver] call ace_common_fnc_setName;
 
 _killerKebapDriver addMPEventHandler ["MPKilled", { 
 	params ["_unit", "_killer", "_instigator", "_useEffects"];

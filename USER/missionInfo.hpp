@@ -40,4 +40,24 @@ class CfgIdentities
 		pitch = 1.0;
 		speaker = "Male01PER";
 	};
+
+	class nadia
+	{
+		face = "max_female8";
+		glasses = "";
+		name = "Nadia";
+		nameSound = "Hooker of Lord Qasim";
+		pitch = 1.0;
+		speaker = "Male01PER";
+	};
+
+	class khalil
+	{
+		face = "AsianHead_A3_02";
+		glasses = "";
+		name = "Khalil";
+		nameSound = "Bringer of the Killer Kebap";
+		pitch = 1.0;
+		speaker = "Male01PER";
+	};
 };
