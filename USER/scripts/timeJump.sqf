@@ -18,7 +18,7 @@ cutText ["", "BLACK OUT", 2];
 sleep 2;
 
 // hint "moved into plane";
-[["14/07/1992 - 4:00", 2, 4, 2], ["Morning dawns...", 3, 4, 2], ["...prepare your attack", 3, 4, 2]] spawn BIS_fnc_EXP_camp_SITREP;
+[["14/07/1992 - 5:50", 2, 4, 2], ["Morning dawns...", 3, 4, 2], ["...prepare your attack", 3, 4, 2]] spawn BIS_fnc_EXP_camp_SITREP;
 sleep 4;
 cutText ["", "BLACK IN", 4];
 4 fadeSound 1;

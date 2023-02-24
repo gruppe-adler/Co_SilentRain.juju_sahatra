@@ -9,7 +9,7 @@ class Header
 respawn = 3;
 respawnDelay = 9999999;
 respawnVehicleDelay = 0;
-respawnTemplates[] = {"ace_spectator"};
+respawnTemplates[] = {"Base"};
 respawnOnStart = -1;
 respawnDialog = 0;
 disabledAI = 0;
