@@ -853,3 +853,11 @@ class kebapsong
 	sound[]	= {"\USER\sounds\kebapsong.ogg", db + 10, 1.0 };
 	titles[] = {};
 };
+
+
+class buzz
+{
+    name = "buzz";
+    sound[] = {"USER\sounds\buzz.ogg", 1, 1, 50};
+    titles[] = {0,""};
+};

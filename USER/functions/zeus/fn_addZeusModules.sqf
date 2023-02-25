@@ -120,6 +120,41 @@
 	}
 ] call zen_custom_modules_fnc_register;
 
+
+
+["Silent Rain Spawns", "Music Radio",
+    {
+      // Get all the passed parameters
+      params ["_position", "_object"];
+      _position = ASLToAGL _position;
+
+      private _radio = (selectRandom ["land_gm_euro_furniture_radio_01", "jbad_radio_b", "Land_FMradio_F"]) createVehicle [0,0,0];
+      _radio setPos _position;
+      _radio setDir (random 360);
+
+      private _source = createSoundSource [(selectRandom ["music1", "music2", "arabicsong1", "arabicsong2"]), _position, [], 0];
+      [_source, _radio, false] call grad_SR_fnc_ambient_soundSourceHelper;
+      
+      {
+        _x addCuratorEditableObjects [[_radio], false];
+      } forEach allCurators;
+
+    }] call zen_custom_modules_fnc_register;
+
+
+["Silent Rain Spawns", "Create Mosque Singer",
+    {
+      params ["_position", "_object"];
+      _position = ASLToAGL _position;
+
+      [_position] remoteExec ["grad_SR_fnc_ambient_createMosqueSinger", 2];
+
+    }] call zen_custom_modules_fnc_register;
+
+
+
+
+
 /// MISSION START 
 
 [
@@ -191,3 +226,6 @@
 		missionNameSpace setVariable ["GRAD_CancelConvoy", true, true];
 	}
 ] call zen_custom_modules_fnc_register;
+
+
+

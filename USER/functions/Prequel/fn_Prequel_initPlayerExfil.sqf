@@ -6,6 +6,7 @@ private _heliCrew = createvehiclecrew _heli;
 _heliCrew setBehaviour "CARELESS";
 
 [_heli] call grad_SR_fnc_Prequel_playExfilData;
+[_heli] call grad_rotorwash_fnc_addVehicle;
 
 private _heliWaypoint = _heliCrew addWaypoint [[1978.56,6004.65,0], 0];
 _heliWaypoint setWaypointType "SCRIPTED";

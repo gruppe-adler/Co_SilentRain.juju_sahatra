@@ -32,6 +32,46 @@ enableDebugConsole[] = {
 #include "cfgCivilians.hpp"
 
 class cfgSfx {
+
+    class music1
+    {
+        name = "music1";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\sounds\music1.ogg",35,1,150,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+
+    class music2
+    {
+        name = "music2";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\sounds\music2.ogg",35,1,150,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+
+    class prayer2
+    {
+        name = "prayer2";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\sounds\prayer2.ogg",100,1,500,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+
+     class arabicsong1
+    {
+        name = "arabicsong1";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\sounds\arabicsong1.ogg",35,1,150,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
+        
+    class arabicsong2
+    {
+        name = "arabicsong2";
+        sounds[]={sfxsound};
+        sfxsound[]={"USER\sounds\arabicsong2.ogg",35,1,150,1,1,1,0};
+        empty[]= {"",0,0,0,0,0,0,0};
+    };
 	
     class c130_sound_ext_hi
     {
@@ -86,6 +126,31 @@ class cfgSfx {
 };
 
 class cfgVehicles {
+
+     class music1_sfx // class name to be used with createSoundSource
+    {
+        sound = "music1"; // reference to CfgSFX class
+    };
+
+    class music2_sfx // class name to be used with createSoundSource
+    {
+        sound = "music2"; // reference to CfgSFX class
+    };
+
+    class prayer2_sfx // class name to be used with createSoundSource
+    {
+        sound = "prayer2"; // reference to CfgSFX class
+    };
+
+    class arabicsong1_sfx // class name to be used with createSoundSource
+    {
+        sound = "arabicsong1"; // reference to CfgSFX class
+    };
+
+    class arabicsong2_sfx // class name to be used with createSoundSource
+    {
+        sound = "arabicsong2"; // reference to CfgSFX class
+    };
 	
     class c130_sound_ext_hi_sfx // class name to be used with createSoundSource
     {
@@ -162,6 +227,9 @@ class CfgFunctions
     #include "node_modules\grad-drop\cfgFunctions.hpp"
 
 	#include "USER\userFunctions.hpp"
+    
+
+	#include "grad-rotorwash\CfgFunctions.hpp"
 };
 
 
