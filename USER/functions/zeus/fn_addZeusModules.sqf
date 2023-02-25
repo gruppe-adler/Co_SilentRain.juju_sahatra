@@ -132,7 +132,7 @@
       _radio setPos _position;
       _radio setDir (random 360);
 
-      private _source = createSoundSource [(selectRandom ["music1", "music2", "arabicsong1", "arabicsong2"]), _position, [], 0];
+      private _source = createSoundSource [(selectRandom ["music1_sfx", "music2_sfx", "arabicsong1_sfx", "arabicsong2_sfx"]), _position, [], 0];
       [_source, _radio, false] call grad_SR_fnc_ambient_soundSourceHelper;
       
       {
@@ -148,6 +148,15 @@
       _position = ASLToAGL _position;
 
       [_position] remoteExec ["grad_SR_fnc_ambient_createMosqueSinger", 2];
+
+    }] call zen_custom_modules_fnc_register;
+
+["Silent Rain Spawns", "Create Music Carrier",
+    {
+      params ["_position", "_object"];
+      _position = ASLToAGL _position;
+
+      [_position] remoteExec ["grad_SR_fnc_ambient_createMusicCarrier", 2];
 
     }] call zen_custom_modules_fnc_register;
 

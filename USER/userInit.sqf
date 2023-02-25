@@ -93,7 +93,7 @@ if (isServer) then {
         {
             private _playerAsZeus = getAssignedCuratorUnit _x;
             if (!isNull _playerAsZeus) then {
-                [_message, _color] remoteExec ["grad_SR_fnc_curatorShowFeedbackMessage", _playerAsZeus];
+                [_message, _color] remoteExec ["grad_SR_fnc_zeus_curatorShowFeedbackMessage", _playerAsZeus];
             };
         } forEach allCurators;
     }] call CBA_fnc_addEventHandler;
