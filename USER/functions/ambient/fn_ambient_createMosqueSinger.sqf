@@ -37,8 +37,22 @@ if (count _minarets > 0) then {
         _unit setDir ((_unit getDir _minaret) - 180);
 
 
-        private _source = createSoundSource ["prayer2_sfx", getPos _unit, [], 0];
-        [_source, _unit, false] call grad_SR_fnc_ambient_soundSourceHelper;
+        private _source = createSoundSource ["adhan_sfx", getPos _unit, [], 0];
+        private _helper = [_source, _unit, false] call grad_SR_fnc_ambient_soundSourceHelper;
+        [
+            {
+                params ["_source", "_helper", "_unit"];
+                if (!isNull _source && !isNull _helper) then {
+                    if (_unit isEqualTo _helper) then {
+                        deleteVehicle _source;
+                    } else {
+                        deleteVehicle _helper;
+                    };
+                };
+            },
+            [_source, _helper, _unit],
+            249
+        ] call CBA_fnc_waitAndExecute;
 
         [_unit, "Acts_JetsMarshallingStop_loop"] remoteExec ["switchMove"];
 
@@ -53,13 +67,20 @@ if (count _minarets > 0) then {
 
         private _pfh = [{
             params ["_args", "_handle"];
+            _args params ["_unit", "_source"];
+
+            if (isNull _source) exitWith {
+                [_unit, "Acts_JetsMarshallingStop_out"] remoteExec ["switchMove"];
+                [_handle] call CBA_fnc_removePerFrameHandler;
+            };
 
             if (!alive _unit || lifeState _unit == "INCAPACITATED") exitWith {
                 _unit setDamage 1;
                 [_handle] call CBA_fnc_removePerFrameHandler;
             };
+
             [_unit, "Acts_JetsMarshallingStop_loop"] remoteExec ["switchMove"];
 
-        }, 2, [_unit]] call CBA_fnc_addPerFrameHandler;
+        }, 2, [_unit, _source]] call CBA_fnc_addPerFrameHandler;
 
 };

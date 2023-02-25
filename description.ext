@@ -49,11 +49,11 @@ class cfgSfx {
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
-    class prayer2
+    class adhan
     {
-        name = "prayer2";
+        name = "adhan";
         sounds[]={sfxsound};
-        sfxsound[]={"USER\sounds\prayer2.ogg",100,1,500,1,1,1,0};
+        sfxsound[]={"USER\sounds\Adhan.ogg",100,1,500,1,1,1,0};
         empty[]= {"",0,0,0,0,0,0,0};
     };
 
@@ -137,9 +137,9 @@ class cfgVehicles {
         sound = "music2"; // reference to CfgSFX class
     };
 
-    class prayer2_sfx // class name to be used with createSoundSource
+    class adhan_sfx // class name to be used with createSoundSource
     {
-        sound = "prayer2"; // reference to CfgSFX class
+        sound = "adhan"; // reference to CfgSFX class
     };
 
     class arabicsong1_sfx // class name to be used with createSoundSource
