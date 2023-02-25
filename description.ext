@@ -189,6 +189,18 @@ class cfgVehicles {
 
 };
 
+class CfgMusic {
+	tracks[] = {};
+	class introVibe
+	{
+		// display name
+		name = "introVibe";
+
+		// filename, volume, pitch
+		sound[]	= { "USER\sounds\introVibe.ogg", db + 10, 1.0 };
+	};
+};
+
 class missionSettings {
 	#include "USER\missionSettings.hpp"
 

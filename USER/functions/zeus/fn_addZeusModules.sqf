@@ -41,7 +41,27 @@
 
 		[
 			{
-				[] call grad_SR_fnc_Prequel_initEvac;
+				// [] call grad_SR_fnc_Prequel_initEvac;
+				switch (GRAD_WARLORD_POSITION) do {
+					case 1: {
+						[
+							{
+								[] call grad_SR_fnc_Prequel_initEvacPos1;
+							},
+							[],
+							210
+						] call CBA_fnc_waitAndExecute;
+					};
+					case 2: {
+						[
+							{
+								[] call grad_SR_fnc_Prequel_initEvacPos1;
+							},
+							[],
+							220
+						] call CBA_fnc_waitAndExecute;
+					};
+				};
 			},
 			[],
 			30
@@ -63,7 +83,27 @@
 
 		[
 			{
-				[] call grad_SR_fnc_Prequel_initEvac;
+				// [] call grad_SR_fnc_Prequel_initEvac;
+				switch (GRAD_WARLORD_POSITION) do {
+					case 1: {
+						[
+							{
+								[] call grad_SR_fnc_Prequel_initEvacPos1;
+							},
+							[],
+							210
+						] call CBA_fnc_waitAndExecute;
+					};
+					case 2: {
+						[
+							{
+								[] call grad_SR_fnc_Prequel_initEvacPos1;
+							},
+							[],
+							220
+						] call CBA_fnc_waitAndExecute;
+					};
+				};
 			},
 			[],
 			25
