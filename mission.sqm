@@ -10225,7 +10225,7 @@ class Mission
 			flags=4;
 			class Attributes
 			{
-				init="[this, ""mrk_drop_1"", 140, 20, true, call grad_drop_fnc_haloJumpBeforeLocal, call grad_drop_fnc_haloJumpAfterLocal] call grad_drop_fnc_preparePlane;";
+				init="[this, ""mrk_drop_1"", 140, 30, true] call grad_drop_fnc_preparePlane;";
 				reportOwnPosition=1;
 			};
 			id=4514;
@@ -37103,7 +37103,7 @@ class Mission
 					flags=4;
 					class Attributes
 					{
-						init="[this, ""mrk_drop_2"", 140, 20, true, call grad_drop_fnc_haloJumpBeforeLocal, call grad_drop_fnc_haloJumpAfterLocal] call grad_drop_fnc_preparePlane;";
+						init="[this, ""mrk_drop_2"", 140, 30, true] call grad_drop_fnc_preparePlane;";
 						reportOwnPosition=1;
 					};
 					id=4513;
