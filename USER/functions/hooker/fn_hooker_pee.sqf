@@ -4,7 +4,7 @@ _dir = getDir _hooker;
 
 private _puddle = createSimpleObject ["WaterSpill_01_Small_New_F", [0,0,0], true];
 private _position = _hooker getPos [0.25, getDir _Hooker];
-_puddle setPos [_position#0, _position#1, _position#2+0.1];
+_puddle setPosATL [_position#0, _position#1, (getPosATL _hooker)#2+0.05];
 _puddle setObjectScale 0.02;
 private _sound = _hooker say3D "nadia_pee";
 
