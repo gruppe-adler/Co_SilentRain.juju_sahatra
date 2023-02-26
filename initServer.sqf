@@ -15,19 +15,6 @@ GRAD_LAYERS_TO_DELETE = [];
 } forEach _options;
 publicVariable "GRAD_LAYERS_TO_DELETE";
 
-
-private _qasim = [GRAD_Qasim_1, GRAD_Qasim_2, GRAD_Qasim_3] select (GRAD_WARLORD_POSITION - 1);
-{
-	_x addEventHandler ["HandleDamage", {
-		params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
-
-		if (_hitIndex == -1) then {
-			0
-		};
-	}];
-} forEach (nearestObjects [_qasim, ["house"], 200]);
-
-
 if (!isMultiplayer) exitWith {};
 {
 	_x params ["_objects", "_markers"];
