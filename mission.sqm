@@ -16,14 +16,14 @@ class EditorData
 	};
 	class LayerIndexProvider
 	{
-		nextID=2133;
+		nextID=2159;
 	};
 	class Camera
 	{
-		pos[]={5881.9897,147.99748,7588.1924};
-		dir[]={0.85177422,-0.44804552,0.27173603};
-		up[]={0.42688206,0.8939957,0.13618642};
-		aside[]={0.30394971,-2.9185321e-007,-0.95274049};
+		pos[]={5877.8955,150.76617,7593.751};
+		dir[]={0.89577985,-0.33781078,-0.28890258};
+		up[]={0.32150412,0.94121403,-0.10368993};
+		aside[]={-0.30694649,6.9267116e-009,-0.95172799};
 	};
 };
 binarizationWanted=0;
@@ -6560,8 +6560,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5887.9302,142.35815,7595.7183};
-								angles[]={6.2828403,4.9677119,0.0050978116};
+								position[]={5932.7314,142.51389,7585.2607};
+								angles[]={-0,4.1636419,0.0034526715};
 							};
 							side="West";
 							flags=6;
@@ -6623,8 +6623,8 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5889.644,142.36652,7595.1646};
-								angles[]={6.2828403,5.12468,0.0049914722};
+								position[]={5933.7124,142.51631,7583.8057};
+								angles[]={6.2797327,4.1011043,0.0034526715};
 							};
 							side="West";
 							flags=4;
@@ -6716,14 +6716,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5894.2637,142.39125,7597.8628};
-								angles[]={0,5.2188296,0};
+								position[]={5922.4839,142.48933,7579.9087};
+								angles[]={0,0.16789593,-0};
 							};
 							side="West";
 							flags=7;
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Gruppenführer@Alpha";
 								isPlayable=1;
 							};
@@ -6778,14 +6779,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5895.688,142.39133,7597.2974};
-								angles[]={0,5.2188315,0};
+								position[]={5918.6548,142.47192,7581.23};
+								angles[]={-0,0.11309291,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Pionier";
 								isPlayable=1;
 							};
@@ -6840,14 +6842,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5897.9722,142.39191,7598.2397};
-								angles[]={0,5.2188296,0};
+								position[]={5917.7559,142.46744,7581.46};
+								angles[]={-0,0.33447582,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Combat First Responder";
 								isPlayable=1;
 							};
@@ -6902,14 +6905,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5895.6772,142.39143,7598.7783};
-								angles[]={0,5.2188296,0};
+								position[]={5921.5029,142.48618,7580.2598};
+								angles[]={-0,0.17521474,0.0050033992};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -6964,19 +6968,21 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5898.3276,142.39143,7600.3853};
-								angles[]={0,5.2188292,0};
+								position[]={5919.5508,142.47643,7580.7603};
+								angles[]={-0,0.16052182,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
 							id=15923;
 							type="B_Soldier_F";
+							atlOffset=1.5258789e-005;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -7026,14 +7032,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5897.082,142.39151,7599.7549};
-								angles[]={0,5.2188268,0};
+								position[]={5920.5117,142.48122,7580.5181};
+								angles[]={-0,0.18540302,0.0050033992};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -7118,14 +7125,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5893.0532,142.37459,7592.2007};
-								angles[]={0,4.9751253,0};
+								position[]={5924.5938,142.49144,7579.6289};
+								angles[]={0,0.1968319,-0};
 							};
 							side="West";
 							flags=7;
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Gruppenführer@Bravo";
 								isPlayable=1;
 							};
@@ -7180,14 +7188,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5894.5723,142.38148,7591.9946};
-								angles[]={6.2828403,4.9751287,0.0050033992};
+								position[]={5928.458,142.49144,7578.6475};
+								angles[]={-0,0.34879801,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Pionier";
 								isPlayable=1;
 							};
@@ -7242,14 +7251,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5895.3862,142.38629,7592.5981};
-								angles[]={6.2818937,4.9751239,0.0050033992};
+								position[]={5929.5801,142.49144,7578.2827};
+								angles[]={-0,0.25100312,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Combat First Responder";
 								isPlayable=1;
 							};
@@ -7304,14 +7314,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5894.2041,142.38145,7593.4292};
-								angles[]={6.2818937,4.9751234,0.0050033992};
+								position[]={5925.5283,142.49144,7579.3589};
+								angles[]={-0,0.32774654,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -7366,20 +7377,20 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5895.3325,142.38846,7594.7178};
-								angles[]={6.2818937,4.9751225,0.001544081};
+								position[]={5926.4746,142.49144,7579.1401};
+								angles[]={-0,0.34528857,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
 							id=15930;
 							type="B_Soldier_F";
-							atlOffset=-1.5258789e-005;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -7429,14 +7440,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5896.5679,142.39333,7595.479};
-								angles[]={6.2818937,4.9751391,0.0049914722};
+								position[]={5927.4575,142.49144,7578.9526};
+								angles[]={-0,0.30137515,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -7521,14 +7533,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5891.3286,142.3533,7587.9937};
-								angles[]={0,5.3157539,0};
+								position[]={5922.0425,142.48872,7577.9956};
+								angles[]={0,0.205917,-0};
 							};
 							side="West";
 							flags=7;
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Gruppenführer@Charlie";
 								isPlayable=1;
 							};
@@ -7583,20 +7596,20 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5892.6904,142.35757,7587.2925};
-								angles[]={6.2780876,5.315774,0.0050978116};
+								position[]={5918.1909,142.46962,7579.231};
+								angles[]={-0,0.22049825,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Pionier";
 								isPlayable=1;
 							};
 							id=15934;
 							type="B_engineer_F";
-							atlOffset=1.5258789e-005;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -7646,14 +7659,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5893.6602,142.36389,7587.5889};
-								angles[]={6.278194,5.3157735,0.0049914722};
+								position[]={5917.3027,142.46518,7579.5737};
+								angles[]={-0,0.30737701,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Combat First Responder";
 								isPlayable=1;
 							};
@@ -7708,14 +7722,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5892.8237,142.3656,7588.7686};
-								angles[]={6.278194,5.3157716,0.0049914722};
+								position[]={5921.1211,142.48427,7578.2651};
+								angles[]={-0,0.17462167,0.0050033992};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -7770,14 +7785,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5894.3179,142.37726,7589.6045};
-								angles[]={6.278182,5.3157711,0.0050033992};
+								position[]={5920.1382,142.47934,7578.584};
+								angles[]={-0,0.20824702,0.0050033992};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -7832,14 +7848,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5895.7363,142.38589,7589.9092};
-								angles[]={6.278182,5.3157716,0.0050033992};
+								position[]={5919.1304,142.4743,7578.8848};
+								angles[]={-0,0.2650955,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -7924,13 +7941,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5888.9282,142.31673,7585.2109};
+								position[]={5924.0894,142.49144,7577.46};
+								angles[]={0,0.35171434,-0};
 							};
 							side="West";
 							flags=7;
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Gruppenführer@Delta";
 								isPlayable=1;
 							};
@@ -7985,14 +8004,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5889.1235,142.30704,7583.6904};
-								angles[]={6.2718863,0,0.0066771582};
+								position[]={5927.9854,142.49144,7576.3906};
+								angles[]={-0,0.22804983,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Pionier";
 								isPlayable=1;
 							};
@@ -8047,14 +8067,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5889.918,142.30522,7583.061};
-								angles[]={6.2718863,0,0.0066771582};
+								position[]={5929.1025,142.49144,7576.2388};
+								angles[]={-0,0.1955663,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Combat First Responder";
 								isPlayable=1;
 							};
@@ -8109,14 +8130,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5890.4136,142.32379,7584.4185};
-								angles[]={6.2743831,0,0.008693628};
+								position[]={5925.0142,142.49144,7577.1816};
+								angles[]={-0,0.33324429,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -8171,14 +8193,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5891.9507,142.33005,7583.6636};
-								angles[]={6.2731905,0,0.008693628};
+								position[]={5925.9731,142.49144,7576.895};
+								angles[]={-0,0.14397405,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -8233,14 +8256,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5893.0068,142.32724,7582.6685};
-								angles[]={6.2731905,0,0.0066682254};
+								position[]={5927.0723,142.49144,7576.7305};
+								angles[]={-0,0.27765787,0};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -8325,19 +8349,20 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5886.8403,142.25446,7581.3774};
+								position[]={5921.3813,142.48557,7575.7803};
+								angles[]={0,0.22661461,-0};
 							};
 							side="West";
 							flags=7;
 							class Attributes
 							{
 								rank="SERGEANT";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Gruppenführer@Reserve";
 								isPlayable=1;
 							};
 							id=15947;
 							type="B_Soldier_SL_F";
-							atlOffset=1.5258789e-005;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -8387,14 +8412,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5887.0356,142.23544,7579.8579};
-								angles[]={6.2697511,0,0.013434492};
+								position[]={5917.3506,142.46541,7576.8584};
+								angles[]={-0,0.33546394,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Pionier";
 								isPlayable=1;
 							};
@@ -8449,19 +8475,21 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5887.8296,142.23764,7579.228};
-								angles[]={6.2697511,0,0.013434492};
+								position[]={5916.4434,142.46089,7577.0586};
+								angles[]={-0,0.15537468,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Combat First Responder";
 								isPlayable=1;
 							};
 							id=15949;
 							type="B_medic_F";
+							atlOffset=1.5258789e-005;
 							class CustomAttributes
 							{
 								class Attribute0
@@ -8511,14 +8539,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5888.3257,142.26094,7580.5854};
-								angles[]={6.271615,0,0.01156522};
+								position[]={5920.3438,142.48038,7576.0366};
+								angles[]={-0,0.19011089,0.0050033992};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -8573,14 +8602,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5889.8628,142.26999,7579.8306};
-								angles[]={6.2716203,0,0.01156522};
+								position[]={5919.3579,142.47545,7576.2944};
+								angles[]={-0,0.20838173,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -8635,14 +8665,15 @@ class Mission
 							dataType="Object";
 							class PositionInfo
 							{
-								position[]={5890.9185,142.27069,7578.8354};
-								angles[]={6.2716203,0,0.01156522};
+								position[]={5918.3472,142.4704,7576.5669};
+								angles[]={-0,0.26864758,0.0049795164};
 							};
 							side="West";
 							flags=4;
 							class Attributes
 							{
 								rank="CORPORAL";
+								init="if (local this) then {  " \n "    [ " \n "  { " \n "   private _chair = nearestObject [player, ""Land_CampingChair_V2_F""]; " \n "      [_chair, player] call ace_sitting_fnc_sit;  " \n "  }, " \n "  [], " \n "  5 " \n " ] call CBA_fnc_waitAndExecute; " \n "};";
 								description="Schütze";
 								isPlayable=1;
 							};
@@ -8697,7 +8728,6 @@ class Mission
 					{
 					};
 					id=15946;
-					atlOffset=1.5258789e-005;
 					class CustomAttributes
 					{
 						class Attribute0
@@ -8718,7 +8748,7 @@ class Mission
 				};
 			};
 			id=729;
-			atlOffset=-0.017471313;
+			atlOffset=-0.06602478;
 		};
 		class Item2
 		{
@@ -8884,7 +8914,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5914.168,142.95456,7581.4751};
+				position[]={5914.5332,142.95639,7581.4429};
 				angles[]={0,3.3955295,0.0050033992};
 			};
 			side="Empty";
@@ -8900,7 +8930,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5915.1338,142.9594,7581.1523};
+				position[]={5915.499,142.96123,7581.1201};
 				angles[]={0,3.3955295,0.0050033992};
 			};
 			side="Empty";
@@ -8910,13 +8940,14 @@ class Mission
 			};
 			id=3954;
 			type="Land_CampingChair_V2_F";
+			atlOffset=1.5258789e-005;
 		};
 		class Item11
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5916.0996,142.96422,7580.8867};
+				position[]={5916.4648,142.96605,7580.8545};
 				angles[]={0,3.3955312,0.0049795164};
 			};
 			side="Empty";
@@ -8932,7 +8963,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5917.1104,142.96927,7580.6465};
+				position[]={5917.4756,142.9711,7580.6143};
 				angles[]={0,3.3955312,0.0049795164};
 			};
 			side="Empty";
@@ -9076,7 +9107,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5929.6143,142.99649,7577.6133};
+				position[]={5929.3901,142.99649,7577.6709};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9092,7 +9123,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5930.5815,142.99649,7577.2915};
+				position[]={5930.3574,142.99649,7577.3491};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9108,7 +9139,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5931.5459,143.00903,7577.0273};
+				position[]={5931.3218,143.00903,7577.085};
 				angles[]={6.2798381,3.395529,0.0033474891};
 			};
 			side="Empty";
@@ -9118,14 +9149,14 @@ class Mission
 			};
 			id=3967;
 			type="Land_CampingChair_V2_F";
-			atlOffset=0.010604858;
+			atlOffset=0.011184692;
 		};
 		class Item24
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5932.5571,143.02496,7576.7861};
+				position[]={5932.333,143.02496,7576.8438};
 				angles[]={6.2798381,3.395529,0.0033474891};
 			};
 			side="Empty";
@@ -9135,14 +9166,14 @@ class Mission
 			};
 			id=3968;
 			type="Land_CampingChair_V2_F";
-			atlOffset=0.023956299;
+			atlOffset=0.024520874;
 		};
 		class Item25
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5913.2603,142.95004,7581.624};
+				position[]={5913.6255,142.95187,7581.5918};
 				angles[]={0,3.3955312,0.0049795164};
 			};
 			side="Empty";
@@ -9152,7 +9183,7 @@ class Mission
 			};
 			id=3969;
 			type="Land_CampingChair_V2_F";
-			atlOffset=1.5258789e-005;
+			atlOffset=3.0517578e-005;
 		};
 		class Item26
 		{
@@ -9191,7 +9222,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5933.5313,143.041,7576.4932};
+				position[]={5933.3071,143.041,7576.5508};
 				angles[]={6.2816415,3.395529,0.001544081};
 			};
 			side="Empty";
@@ -9201,7 +9232,7 @@ class Mission
 			};
 			id=3972;
 			type="Land_CampingChair_V2_F";
-			atlOffset=0.037765503;
+			atlOffset=0.038284302;
 		};
 		class Item29
 		{
@@ -9273,7 +9304,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5929.1816,143.01762,7575.5029};
+				position[]={5928.9575,143.01762,7575.5605};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9290,7 +9321,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5930.1499,143.03133,7575.1807};
+				position[]={5929.9258,143.03133,7575.2383};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9307,7 +9338,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5931.1152,143.04402,7574.917};
+				position[]={5930.8911,143.04402,7574.9746};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9324,7 +9355,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5932.1265,143.05679,7574.6768};
+				position[]={5931.9023,143.05679,7574.7344};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9357,7 +9388,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5933.1001,143.07022,7574.3838};
+				position[]={5932.876,143.07022,7574.4414};
 				angles[]={0,3.3955295,0};
 			};
 			side="Empty";
@@ -9442,7 +9473,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5928.6416,143.06586,7573.0728};
+				position[]={5928.4175,143.06586,7573.1304};
 				angles[]={0,3.3955257,0};
 			};
 			side="Empty";
@@ -9459,7 +9490,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5929.6089,143.08,7572.75};
+				position[]={5929.3848,143.08,7572.8076};
 				angles[]={0,3.3955255,0};
 			};
 			side="Empty";
@@ -9476,7 +9507,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5930.5737,143.09308,7572.4858};
+				position[]={5930.3496,143.09308,7572.5435};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9493,7 +9524,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5931.585,143.10583,7572.2456};
+				position[]={5931.3608,143.10583,7572.3032};
 				angles[]={0,3.395529,0};
 			};
 			side="Empty";
@@ -9527,7 +9558,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5932.5581,143.11925,7571.9526};
+				position[]={5932.334,143.11925,7572.0103};
 				angles[]={0,3.3955412,0};
 			};
 			side="Empty";
@@ -9537,14 +9568,14 @@ class Mission
 			};
 			id=3992;
 			type="Land_CampingChair_V2_F";
-			atlOffset=0.12277222;
+			atlOffset=0.12275696;
 		};
 		class Item49
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5913.7778,142.95256,7579.7231};
+				position[]={5914.1431,142.95439,7579.6909};
 				angles[]={0,3.3955295,0.0050978116};
 			};
 			side="Empty";
@@ -9554,13 +9585,14 @@ class Mission
 			};
 			id=3993;
 			type="Land_CampingChair_V2_F";
+			atlOffset=-3.0517578e-005;
 		};
 		class Item50
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5914.7456,142.95744,7579.3994};
+				position[]={5915.1108,142.95927,7579.3672};
 				angles[]={0,3.39554,0.0050033992};
 			};
 			side="Empty";
@@ -9576,7 +9608,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5915.7104,142.96227,7579.1353};
+				position[]={5916.0757,142.9641,7579.103};
 				angles[]={0,3.3955402,0.0050033992};
 			};
 			side="Empty";
@@ -9593,7 +9625,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5916.7217,142.96733,7578.895};
+				position[]={5917.0869,142.96916,7578.8628};
 				angles[]={0,3.3955295,0.0049795164};
 			};
 			side="Empty";
@@ -9674,7 +9706,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5912.8574,142.94788,7579.8779};
+				position[]={5913.2227,142.94971,7579.8457};
 				angles[]={0,3.3955295,0.0050978116};
 			};
 			side="Empty";
@@ -9684,6 +9716,7 @@ class Mission
 			};
 			id=4001;
 			type="Land_CampingChair_V2_F";
+			atlOffset=-3.0517578e-005;
 		};
 		class Item58
 		{
@@ -9706,7 +9739,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5913.0317,142.94641,7577.3984};
+				position[]={5913.397,142.94824,7577.3662};
 				angles[]={6.2818937,3.395541,0.0065509919};
 			};
 			side="Empty";
@@ -9716,14 +9749,14 @@ class Mission
 			};
 			id=4003;
 			type="Land_CampingChair_V2_F";
-			atlOffset=1.5258789e-005;
+			atlOffset=-0.00048828125;
 		};
 		class Item60
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5913.999,142.9523,7577.0747};
+				position[]={5914.3643,142.95413,7577.0425};
 				angles[]={6.2818937,3.3955314,0.006394445};
 			};
 			side="Empty";
@@ -9733,13 +9766,14 @@ class Mission
 			};
 			id=4004;
 			type="Land_CampingChair_V2_F";
+			atlOffset=-0.00047302246;
 		};
 		class Item61
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5914.9634,142.95813,7576.811};
+				position[]={5915.3286,142.95996,7576.7788};
 				angles[]={6.2818937,3.3955314,0.006394445};
 			};
 			side="Empty";
@@ -9749,13 +9783,14 @@ class Mission
 			};
 			id=4005;
 			type="Land_CampingChair_V2_F";
+			atlOffset=-0.00033569336;
 		};
 		class Item62
 		{
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5915.9746,142.96359,7576.5708};
+				position[]={5916.3398,142.96542,7576.5386};
 				angles[]={0,3.395529,0.0050978116};
 			};
 			side="Empty";
@@ -9837,7 +9872,7 @@ class Mission
 			dataType="Object";
 			class PositionInfo
 			{
-				position[]={5912.1108,142.93987,7577.5527};
+				position[]={5912.4761,142.9417,7577.5205};
 				angles[]={6.2798557,3.3955395,0.0086109601};
 			};
 			side="Empty";
@@ -9847,6 +9882,7 @@ class Mission
 			};
 			id=4011;
 			type="Land_CampingChair_V2_F";
+			atlOffset=-0.0012054443;
 		};
 		class Item68
 		{
