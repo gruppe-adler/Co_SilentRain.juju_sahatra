@@ -18,7 +18,7 @@ _killerKebapDriver addEventHandler ["GetInMan", {
 		[_unit, _kebapbox] call grad_SR_fnc_killerKebap_deleteKebap;
 
 		[_vehicle] remoteExec ["grad_SR_fnc_killerkebap_playSong", [0, -2] select isDedicated, _vehicle];
-		_vehicle setVariable ["songPlaying", true, true];
+		
 	};
 }];
 

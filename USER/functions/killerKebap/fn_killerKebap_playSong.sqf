@@ -7,6 +7,7 @@ if (isNull _car) exitWith {};
 if (!alive _car) exitWith {};
 
 private _song = _car say3d ["kebapsong", 200];
+_car setVariable ["songPlaying", true];
 
 [{
 	params ["_song", "_car"];
