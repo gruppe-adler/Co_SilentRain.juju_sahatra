@@ -1,5 +1,8 @@
 params ["_unit"];
 
+if (_unit getVariable ["grad_SR_actionsAdded", false]) exitWith {};
+_unit setVariable ["grad_SR_actionsAdded", true];
+
 _unit addAction
 [
 	"Carry Gesture",	// title

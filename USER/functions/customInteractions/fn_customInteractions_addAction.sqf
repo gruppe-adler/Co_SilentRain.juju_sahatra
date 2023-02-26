@@ -1,5 +1,9 @@
 params ["_unit", "_name"];
 
+// only add once / failsafe
+if (_unit getVariable ["grad_SR_actionsAdded", false]) exitWith {};
+_unit setVariable ["grad_SR_actionsAdded", true];
+
 // name is used for sound file identification of voice
 
 _unit addEventHandler ["GestureDone", {

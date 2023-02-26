@@ -6,5 +6,8 @@ class grad_ambient {
 	class ambient_createMusicCarrier;
 	class ambient_hitPart;
 	class ambient_ownerShipHandler;
+	class ambient_radioActions;
+	class ambient_radioSpawn;
+	class ambient_radioToggle;
 	class ambient_soundSourceHelper;
 };

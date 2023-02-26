@@ -1,6 +1,10 @@
-params ["_source", "_positionOrObject", ["_createDummy", true]];
+params ["_source", "_positionOrObject", ["_createDummy", true], ["_recreate", false]];
 
 private _posFinal = _positionOrObject;
+
+if (_recreate) then {
+    _createDummy = false;
+};
 
 if (!_createDummy) then {
     _posFinal = getPos _positionOrObject;
@@ -18,22 +22,28 @@ if (_createDummy) then {
     _helper setVariable ["soundSource", _source, true];
 };
 
-{
-    _x addCuratorEditableObjects [[_helper], false];
-} forEach allCurators;
+if (!_recreate) then {
+    {
+        _x addCuratorEditableObjects [[_helper], false];
+    } forEach allCurators;
 
-_helper addEventHandler ["Deleted", {
-  params ["_entity"];
-  deleteVehicle (_entity getVariable ["soundSource", objNull]);
-}];
+    _helper addEventHandler ["Deleted", {
+    params ["_entity"];
+    deleteVehicle (_entity getVariable ["soundSource", objNull]);
+    }];
 
-[_helper] remoteExec ["grad_SR_fnc_ambient_hitPart", 0, true];
+    [_helper] remoteExec ["grad_SR_fnc_ambient_hitPart", 0, true];
+};
+
+
 
 if (!_createDummy) then {
-    _helper addMPEventHandler ["MPKilled", {
-        params ["_entity"];
-        deleteVehicle (_entity getVariable ["soundSource", objNull]);
-    }];
+    if (!_recreate) then {
+        _helper addMPEventHandler ["MPKilled", {
+            params ["_entity"];
+            deleteVehicle (_entity getVariable ["soundSource", objNull]);
+        }];
+    };
 
     [{
         params ["_args", "_handle"];
