@@ -55,7 +55,7 @@
 					case 2: {
 						[
 							{
-								[] call grad_SR_fnc_Prequel_initEvacPos1;
+								[] call grad_SR_fnc_Prequel_initEvacPos2;
 							},
 							[],
 							220
@@ -100,7 +100,7 @@
 					case 2: {
 						[
 							{
-								[] call grad_SR_fnc_Prequel_initEvacPos1;
+								[] call grad_SR_fnc_Prequel_initEvacPos2;
 							},
 							[],
 							220
