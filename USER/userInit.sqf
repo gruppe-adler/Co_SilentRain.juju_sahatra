@@ -115,11 +115,16 @@ if (isServer) then {
 
 private _qasim = [GRAD_Qasim_1, GRAD_Qasim_2, GRAD_Qasim_3] select (GRAD_WARLORD_POSITION - 1);
 {
-	_x addEventHandler ["HandleDamage", {
-		params ["_unit", "_selection", "_damage", "_source", "_projectile", "_hitIndex", "_instigator", "_hitPoint", "_directHit"];
-
-		if (_hitIndex == -1) then {
-			0
-		};
-	}];
-} forEach (nearestObjects [_qasim, ["house"], 200]);
+    _x addEventHandler ["Explosion", {
+        params ["_vehicle", "_damage", "_source"];
+        [_vehicle, false] remoteExecCall ["allowDamage", _vehicle];
+        [
+            {
+                params ["_veh"];
+                [_veh, true] remoteExecCall ["allowDamage", _veh];
+            },
+            [_vehicle],
+            0.5
+        ] call CBA_fnc_waitAndExecute;
+    }];
+} forEach (nearestObjects [_qasim, ["House"], 200]);
